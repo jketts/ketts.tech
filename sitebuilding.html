@@ -48,12 +48,15 @@
   <div class="article">
     <h1 class="articletitle"> How I built this site </h1>
 
+
+
+<div class="articletext">
+    <p> So if you're reading this then it means that this website is finally online! </p>
+
     <div class="openingimage">
       <img src="sitemaker/sitemake.png" alt ="[example of the code for making the front page]" width="50%" height="50%">
     </div>
 
-<div class="articletext">
-    <p> So if you're reading this then it means that this website is finally online! </p>
     <p>
     I've been meaning to build a website for YEARS... it just seems to be one of those things that everyone wants to do but never gets round to.
     I first started one when I first went to university but never got past index.html mostly due to my work with <a href="bummit.html">BUMMIT</a> taking up most of my free time.
@@ -76,20 +79,65 @@
       And honestly... I'm not sure if it looks as nice as a premade template which I could have filled out in an afternoon and saved myself a lot of effort.
        But, I've certainly learnt a lot more code and I do get proudly say that I built the site myself - and thats probably better in the long term.</p>
 
-    <h3>Code</h3>
+    <h3>Code and setup</h3>
 
-    <p>So the code for the site is available  <a href="http://isotope.metafizzy.co/">here</a>.
+    <p>So the code for the site is available <a href="https://github.com/jketts/ketts.tech">here</a>. I am frequently updating the git to and pulling onto the hosting server instead of uploading directly.
+      I'm aware this probably isn't an elegant solution - but it does have the advantage of allowing me to go to an earlier edition incase I make some disastrous changes that
+       break everything (probably the javascript).
+
+ <br><br>
+
        To allow the articles to sort via catagory and display nicely on the page I used the isotope plugin which is available <a href="http://isotope.metafizzy.co/">here</a>.
        Its very easy to get working using the documantation on the site. The jist of it is that you may easily create a new element which will be auto-positioned for in a grid which
        you define on the page. You can then tag each element to allow it to be sorted into a catagory.
        These elements dont have to all be the same size  - and the javascript will mosaic them quite neatly if they are different sizes -
        but I found it made my page look a little cleaner when every article link was the same size.
 
+       <br><br>
+       The domain name was purchased through <a href="https://www.namecheap.com">namecheap</a> and the server is from <a href="https://cloud.digitalocean.com/droplets">digital ocean</a>,
+       both were super simple to set up and had lots of prompts on the site to make sure I knew what I was doing. <br>
+       I would like so say a huge thankyou too data David from <a href="https://dsa.tech/">dsa.tech</a> for the recommendation on the hosting and ample
+        help with the apache commands to get everything up and running.
 
-       The code for the website, as well as all the images used in the site is <a href="https://github.com/jketts/ketts.tech ">here</a>.
-       The domain name was purchased through https://www.namecheap.com and the server is from https://cloud.digitalocean.com/droplets
+  <br><br>
+  So lets look briefly at the commands to set up the site. Bare in mind that, as I've named this site ketts.tech
+  - thats the name you should replace if you are using these instructions to put up your own site.
 
-       I would like so say a huge thankyou too
+
+  Assuming you've already purchase the domain name, and the have the server that will host the site, and you've connected them, then first SSH into the server.
+  This should be as easy as <strong> ssh root@ketts.tech </strong>. second; update the password on the site from the default. You're now running as root and you'll need to add a new user:
+   <strong> adduser NEWUSERNAME </strong> then give that user sudo privilages using <strong> usermod -aG sudo ketts </strong>. There, done.
+
+    <br><br>
+
+    Now, in a seperate terminal window, you may ssh into the server as this new user and follow the instructions below:
+
+<ul>
+  <li><strong> ssh NEWUSERNAME@ketts.tech </strong>, too SSH into the server  </li>
+ <li> <strong> sudo ufw app list</strong> To start allowing general traffic to contact the site </li>
+<li>  <strong> sudo ufw allow OpenSSH </strong> </li>
+  <li> <strong> sudo ufw enable </strong> </li>
+  <li> <strong> sudo ufw status</strong> check everything is OK</li>
+  <li> <strong> sudo ufw allow http </strong>  </li>
+  <li><strong>  sudo ufw allow https </strong> </li>
+  <li><strong>  sudo ufw status </strong>  again, check everything is OK</li>
+  <li><strong>  cd /var sudo apt-get install  apache2 </strong> install apache</li>
+  <li><strong>  cd www/ sudo git clone https://github.com/jketts/ketts.tech.git  </strong> clone the website from github </li>
+  <li><strong>  cd ketts.tech/ sudo git pull </strong>  </li>
+    <li><strong>  cd /etc/apache2 </strong>  Now go to apache </li>
+    <li> <strong> sudo nano 000-default.conf </strong> and edit the config - to include the git name </li>
+    <li> <strong> sudo chmod -R 755 /var/www </strong>  </li>
+    <li><strong>  sudo a2ensite 000-default.conf </strong> </li>
+<li><strong> sudo service apache2 reload </strong> quickly restart apache, the website should now be live! </li>
+<li>Now, if you're like me you may be contantly wanting to fiddle with bits of the site.
+  To do this, just ssh back in, navigate to the corect dirrectoty using <strong> cd var/www/ketts.tech </strong> then use <strong> sudo git pull </strong> to update
+. </li>
+<li> Sometimes it doesn't want to update - as it thinks an edit has been made to the files! To ignore this (as we only ever want to pull from the git to the server)
+  <strong> sudo git stash </strong> and then <strong> sudo git pull </strong> again. </li>
+
+</ul>
+
+
 
      </p>
 
