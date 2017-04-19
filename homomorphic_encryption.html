@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="css/isotope-docs.css" media="screen">
+<html class="export">
+
+<div class="topflexbox">
+  <head>
+    <title>Ketts webheader</title>
+
+  </head>
+
+
+  <body data-page="index">
+
+
+
+   <header class="header">
+    <div class="maintitle">
+    <h1>Joshua Kettlewell</h1>
+    <h3>Ph.D Student,<br>  Singapore University <br> of Technology and Design</h3>
+    </div>
+
+
+    <div class="navs">
+
+
+      <nav>
+    <ul>
+      <li class="site-nav__item site-nav__item--filtering">
+        <a href="index.html">Projects</a></li>
+        <li class="site-nav__item site-nav__item--filtering">
+        <a href="aboutme.html">About me</a></li>
+        <li class="site-nav__item">
+          <a href="http://qti.sutd.edu.sg/">Group Webpage</a></li>
+          <li class="site-nav__item ">
+            <a  href="https://scholar.google.com.sg/citations?user=tQ_YGVIAAAAJ&hl=en">Publications</a>
+          </li>
+          <li class="site-nav__item ">
+            <a  href="https://scholar.google.com.sg/citations?user=tQ_YGVIAAAAJ&hl=en">Contact</a>
+          </li>
+        </ul>
+    </nav>
+    </div>
+
+  </header>
+</div>
+
+
+<section >
+  <div class="article">
+    <h1 class="articletitle"> A Quantum Approach to Homorphic Computing </h1>
+
+<div class="articletext">
+
+  <h2>This page is still under construction!</h2>
+
+  <p> I'll be adding more details soon - but in the mean time here is the bare bones until everything is finished!</p>
+
+
+    <p> So - I've just finished a paper at SUTD about homomorphic computing. It is now available to read on arxiv <a href="http://arxiv.org/abs/1411.5254">here</a> or from the journal
+      <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5034262/">here</a>. Heres an article explaining ha its about and why this is going to be such an important topic in the coming years. </p>
+
+    <div class="openingimage">
+      <img src="homomorphic/marble3.jpg" alt ="homomorphic" width="50%" height="50%">
+    </div>
+
+    <h2>What is homomorphic computing?</h2>
+
+    <p>Lets imagine a scenario: You are some person with some private data. Super private. You don't want anoyone knowing what it is. Now imagine you want to run an algorithm on your data to give you some ouptut.
+       Maybe this will tell you whether your financial data is telling you its time for a merger, for example. But you don't have the ability to run the algorithm.
+       Maybe its very intensive so you'd have to run it on the cloud using someone elses computer. Or maybe the algorithm has been developed by some other person who doesn't
+       trust to give it to anyone else for fear they may copy it. What do you do? <br><br>
+
+      Well - one solution is <strong>homorophic computing</strong>; here you would encrypt your data in a very special way. You have to encrypt it just that it is still <em>malleable</em>,
+      you can still apply algorithms to the data and you will get some sort of encrypted answer which you can the decrypt.
+      The encryption on the answer should <strong>only</strong> dependent on the encryption of the original data, and not the algorithm applied to it.
+       That way people don't need to tell you what algorithm they applied to the data. <br>
+
+      So the scheme woul work as follows.
+
+      <ol>
+        <li>Encrypt your data</li>
+        <li>Send this encrypted data to someone else to run</li>
+        <li>Get some encrypted answer back</li>
+        <li>Decrypt this to to get the answer</li>
+        <li>Encrypt this to to get the answer</li>
+      </ol>
+
+          Easy peasy... right? </p>
+
+      <h2>Is this even possible?</h2>
+
+      <p>Well there has been a scheme from <a href="https://crypto.stanford.edu/craig/craig-thesis.pdf">Gentry</a> showing that it is possible to do with classical computers -
+        however, as with alomst all classical encryption problems, its makes use of the assumption that certain problems are hard to slove
+        (in this specific application it is related a shortest path problem on ideal lattices). But here in the quantum lab we <em>really</em> don't like making these kind of assumptions - instead aiming for information theoretic security.
+         This is monstly due to the fact that if we get a quantum computer then many of these assumptions on the hardness of certain problems become false
+         (for example RSA key distribution, a relative to Dickie-Helman encryption which forms the basis of many of our day to day protocols, gets broken by Shors Algorithm
+          which finds the prime factors of a number efficiently). <br><br>
+         <em>However </em>, there exists a <a href="https://arxiv.org/abs/1406.2456">no-go</a> theorem that proves its impossible to do this efficiently and with perfect information protection even if you use a quantum computer.
+          But this is only for <strong>perfect</strong> security- what if you leak just a tiny tiny bit of information? Or what is the compuation has some fintie probability of failure?
+           Then that would still be pretty useful! Thats the idea with this paper - we describe an encryption scheme that could potentially leak a tiny amount of information about your data, but it allows computation to be
+           preformed on the encrypted data. </p>
+
+<h2>So how do you do it? </h2>
+
+<p>This result is achieved by allowing the operation that correspond to computation commute with those that do encryption and decryption (this should be quite obvious when you think about how the scheme has to function).
+  This is quite easy to accomplish in quantum mechanics by simply using the internal rotations on quantum states to be the encryption
+  (like changing the basis of measurement - this is comparable to papers on random walks with encrypted data, and thus the boson sampling model of computation).
+  The computation is then preformed on the spatial mode of the quantum objects - which could be, for example, acheived passively using linear optics.
+</p>
+
+
+<h2>And you can run any algorithm?</h2>
+
+<p>Well not exactly. To do this we would need to make sure that the operations the commute with the encryption/decryption from a universal set. The easy way to do this is to find a few operations which together are generators of a unversal set and make sure those commute. Now - this example allows a REALLY BIG set of operations. But to be honest I'm not clear about whether it's a universal set of operations. I orignally thought it should be, but it now appears that it isn't for group thoery reasons slightly beyond my grasp.  </p>
+
+<p>So the paper is on the ArXiv <a href="http://arxiv.org/abs/1411.5254">here</a>.  The reason that I have the image of marbling is that homorphic encryption schemes always remind me of this video about <a href="https://www.youtube.com/watch?v=p08_KlTKP50">laminar flow</a>... which is a pretty cool topic in itself.  </p>
+
+<h2>Does this paper have implications for further reseach?</h2>
+
+<p> I certianly believe so! This is the first paper (to my knowledge) on a quantum method for homomorphic computing - and I am aware of a few follow on methods for similiar papers
+  which should be coming out of the reseach group soon. This method is partictularly important to emerging industries such as cloud computing - and improves upon other
+  methods such a blind quantum computing by allowing operations to be preformed in a single round of communication between the client with the data and the server prefroming the hidden calculation.
+</p>
+
+</div>
+
+
+
+ </div>
+
+
+
+</section>
+
+
+
+
+  </div>
+</body>
+</html>

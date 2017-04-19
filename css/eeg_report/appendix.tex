@@ -1,0 +1,188 @@
+\documentclass[]{article}
+
+\usepackage[]{mcode}
+\usepackage{geometry}
+\usepackage{pdflscape}
+
+\begin{document}
+\newgeometry{margin=2cm}
+
+\begin{center}
+\section*{Appendix}
+\vspace{30pt}
+\section{Matlab and R-Stats Code}
+\end{center}
+
+\vspace{30pt}
+
+\subsection*{Fourier transform code}
+\begin{lstlisting} 
+close all
+clear all
+clc
+
+x={};
+xx=[];
+tt=[];
+
+load braindata
+%put all data into a cell x
+x{1}=Blake;
+x{2}=David;
+x{3}=Ihor;
+x{4}=James;
+x{5}=Josh;
+x{6}=Meysam;
+x{7}=Priji;
+x{8}=Thommen;
+
+%Scale the time values of each cell in x
+for i=1:length(x)
+    dt(i)=190/length(x{i});
+    t{i}=0:190/length(x{i}):190;%from 0 to 190
+end
+
+%n=input('Select person: \n1-Blake \n2-David \n3-Ihor \n4-James \n5-Josh \n6-Meysam \n7-Priji \n8-Thommen\n');
+for n=1:8%loop through everyone's data
+xx=x{n};%Take one person's data
+tt=1/dt(n);%frequency
+dtt=dt(n);%Sampling time
+xx_split{1}=xx(1:round(length(xx)*6/19));%first 60 seconds of the the audio
+xx_split{2}=xx(round(length(xx)*6/19):round(length(xx)*12/19));%next 60 seconds
+xx_split{3}=xx(round(length(xx)*12/19):round(length(xx)*18/19));%next 60 seconds
+%xx_split{4}=xx(round(length(xx)*18/19):end);%last section spanning 10 secs
+
+
+for i=1:length(xx_split)
+    
+% % %     Fs = tt;                    % Sampling frequency
+% % %     T = 1/Fs;                     % Sample time
+% % %     L = length(xx_split{i});                     % Length of signal
+% % %     t = (0:L-1)*T;                % Time vector
+% % %     
+% % %     NFFT = 2^nextpow2(L); % Next power of 2 from length of y
+% % %     Y = fft(xx_split{i},NFFT)/L;
+% % %     f = Fs/2*linspace(0,1,NFFT/2+1);
+% % % 
+% % % % Plot single-sided amplitude spectrum.
+% % % figure
+% % % plot(f,2*abs(Y(1:NFFT/2+1))) 
+% % % title('Single-Sided Amplitude Spectrum of y(t)')
+% % % xlabel('Frequency (Hz)')
+% % % ylabel('|Y(f)|')
+    
+    
+%     Y=fft(xx_split{i},length(xx_split{i}));
+%     Pyy = Y.*conj(Y)/length(Y);
+%     f = (dtt)*(0:length(Pyy)-1);
+%     figure
+%     plot(f,Pyy(1:length(Pyy)))
+%     title('Power spectral density')
+%     xlabel('Frequency (Hz)')
+
+    xx_fft{i}=abs(2*fft(xx_split{i})/length(xx_split{i})).^2;%fft
+    figure
+    freqs{i}=(2:(length(xx_fft{i})))/60;%freqency values
+    plot(freqs{i},xx_fft{i}(2:end));
+end
+
+for i=1:length(xx_fft)
+[bin_strength]=binning(xx_fft{i},freqs{i});%call the binning function
+BS{i}=bin_strength;%save bin strengths
+end
+
+people_data{n}=BS;%save people-wise data
+
+end
+
+
+%plot all the raw data together
+for i=1:n
+subplot(n,1,i)
+plot(t{i}(2:end),x{i})
+set(gca,'XTick',[0:60:180])
+set(gca,'YTick',[-4000:2000:4000])
+end
+%%%%%%%%% 
+\end{lstlisting}
+
+\vspace{30pt}
+
+\subsection*{Data Binning Code}
+\begin{lstlisting}
+function [bin_strengths]=binning(FT,f)
+bin_strengths=zeros(1,7);%7 bins for 7 frequency ranges-alpha, beta, delta etc.,
+for i=1:length(f)
+    if f(i)>=0.1&&f(i)<=3
+        bin_strengths(1)=bin_strengths(1)+FT(i);
+    elseif f(i)>=4&&f(i)<=7
+        bin_strengths(2)=bin_strengths(2)+FT(i);
+    elseif f(i)>=8&&f(i)<=12
+        bin_strengths(3)=bin_strengths(3)+FT(i);
+    elseif f(i)>=12&&f(i)<=15
+        bin_strengths(4)=bin_strengths(4)+FT(i);
+   elseif f(i)>=16&&f(i)<=20
+        bin_strengths(5)=bin_strengths(5)+FT(i); 
+   elseif f(i)>=21&&f(i)<=30
+        bin_strengths(6)=bin_strengths(6)+FT(i);
+   elseif f(i)>=30&&f(i)<=100
+        bin_strengths(7)=bin_strengths(7)+FT(i);
+    end
+end
+\end{lstlisting}
+
+\newpage
+
+\begin{center}
+\section{Data}
+\end{center}
+\subsection*{Waveband power Data - Song 1}
+
+
+\begin{tabular}{ l | l l l l l }
+Subject & Delta & Theta & Alpha & Beta & Gamma \\ \hline
+  Blake	& 5.163248411 & 3.773982151 & 1.505648882 & 1.60560021 & 0.854430231 \\
+  David & 1.275730834 & 0.252987723 & 0.086058865	 & 0.064080762 & 0.02170367\\
+  Ihor & 1.411940561 & 1.151812744 & 0.842639412& 0.959255974 & 1.077204286\\
+  James	power & 1.886175358 & 0.824150576 & 0.248711166 & 0.145262495 & 0.134758683\\
+  Josh & 4.847887355 & 1.552021957 & 1.000496433 & 1.136194952 & 1.017980297\\
+  Meysam	 & 6.64796523 & 1.321424413 & 0.470461035 & 0.285716271 & 0.269985757\\
+  Priji & 1.676509861 & 0.951462029 & 0.359982638	 & 0.35161852 & 0.358854053\\
+  Thommen & 2.196019957 & 0.634282222 & 0.150238306 & 0.082025989 & 0.018129655 
+\end{tabular}
+
+\vspace{30pt}
+
+\subsection*{Waveband power Data - Song 2 (white noise)}
+
+
+\begin{tabular}{ l | l l l l l }
+Subject & Delta & Theta & Alpha & Beta & Gamma \\ \hline
+  Blake	& 4.86575646 & 3.926271789 & 1.496889296 & 1.727479099 & 0.619873053 \\
+  David & 1.062802146 & 0.384178394 & 0.166170322 & 0.161242359 & 0.087960909\\
+  Ihor & 2.538383421 & 1.152898049 & 0.494279138 & 0.472507955 & 0.271139426\\
+  James & 2.171312818 & 1.196242993 & 0.303550845 & 0.225206498 & 0.084065697\\
+  Josh & 7.905278015 & 2.248105846 & 0.516423694 & 0.571165578 & 0.143480058\\
+  Meysam	 & 6.291259944 & 1.043770037 & 0.403298955 & 0.174658251 & 0.15046022\\
+  Priji & 2.709837829 & 0.636981738 & 0.316013377 & 0.983205946 & 0.841609366\\
+  Thommen & 2.096740444 & 0.501927678 & 0.161262379 & 0.083336177 & 0.013157954
+\end{tabular}
+
+\vspace{30pt}
+
+\subsection*{Waveband power Data - Song 3}
+
+
+\begin{tabular}{ l | l l l l l }
+Subject & Delta & Theta & Alpha & Beta & Gamma \\ \hline
+  Blake	& 3.039583525 & 1.969995054 & 0.731113967 & 0.504185115 & 0.113694039 \\
+  David & 1.352147484 & 0.342408209 & 0.117805103 & 0.123245361 & 0.072485178\\
+  Ihor & 1.358578235 & 0.161449244 & 0.087135436 & 0.067454498 & 0.033426239\\
+  James & 4.708386361 & 2.57322283 & 1.88365643 & 2.1413262 & 1.177050987\\
+  Josh & 2.738767974 & 0.842688522 & 0.19776935 & 0.091965542 & 0.012998966\\
+  Meysam	 & 4.406470663 & 1.248933401 & 0.308993951 & 0.13459399 & 0.089500518\\
+  Priji & 4.614747264 & 1.308923957 & 0.440587407 & 1.05469731 & 1.167639351\\
+  Thommen & 1.898519041 & 0.40333496 & 0.14329867 & 0.087129713 & 0.014566698
+\end{tabular}
+
+\end{document}
