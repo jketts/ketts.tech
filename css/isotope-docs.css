@@ -1,0 +1,437 @@
+/*  our 3 boxes are .button-group, grid and topflexbox*/
+
+.header{
+  width: auto;
+}
+
+.grid {
+  background
+  background: hsla(0, 0%, 0%, 0.15);
+}
+
+
+.button-group {
+  padding-bottom: 25px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: center;
+    position: relative;
+    text-align: center;
+}
+
+.navs{
+  float: right;
+  text-align: right;
+  margin-right: 120px;
+  margin-top: 70px;
+}
+
+.maintitle{
+  float: left;
+  margin-top: 70px;
+  margin-left: 120px;
+}
+
+.topflexbox{
+  display: flex;
+  flex-direction: column;
+  width: auto;
+}
+
+
+
+.button {
+  cursor: pointer;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+
+  background-color: white;
+  color: black;
+  border: 2px solid #000000; /* black */
+
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+
+}
+
+.button:hover {
+  background-color: #000000;
+  color: #FFFFFF;
+}
+
+.button:active,
+.button.is-checked,
+.button.is-selected {
+  background-color: #9494b8;
+  border: 2px solid #9494b8; /* blue */
+
+}
+
+.button.is-checked,
+.button.is-selected {
+  color: white;
+
+}
+
+.button:active {
+
+}
+
+/* hide radio inputs */
+.button input[type="radio"] { display: none; }
+
+/* ---- button-group ---- */
+
+.button-group:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.button-group .button {
+  float: left;
+  border-radius: 0;
+  margin-right: 2px;
+}
+
+.button-group .button:first-child {  }
+.button-group .button:last-child {  }
+
+/* buy-button
+------------------------- */
+
+
+/* element-item
+------------------------- */
+
+.element-item {
+  position: relative;
+  float: left;
+  margin: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+  padding-bottom: 60px;
+
+  background: #FFFFFF;
+  color: #000000;
+}
+
+.element-item > * {
+  margin: 0;
+  padding: 0;
+}
+
+
+.element-item .name {
+  text-align: left;
+  position: absolute;
+  bottom: 20px;
+  margin-left: 20px;
+  margin-right: 25px;
+
+  color: #000000;
+  background: #FFFFFF;
+}
+
+
+
+.element-item .kind {
+  position: absolute;
+  top: 1px;
+  right: 20px;
+  color: #000000;
+  background: #FFFFFF;
+}
+
+
+
+.element-item .original {
+  position: absolute;
+  bottom: 35px;
+  right: 10px;
+  color: #000000;
+  background: #FFFFFF;
+}
+
+
+
+.code-display {
+  margin: 30px;
+}
+
+
+.element-item .quantum  { width: 250; height: 300; background: #FFFFFF;}
+.element-item .hack     { width: 250; height: 300; background: #FFFFFF;}
+.element-item .personal { width: 250; height: 300; background: #FFFFFF;}
+
+
+
+
+
+
+/* grid
+------------------------- */
+
+
+
+
+/* ---- desktop ---- */
+
+
+
+
+
+/* notification
+------------------------- */
+
+.notification {
+  max-width: none;
+  display: none; /* hide by default */
+  position: fixed;
+  z-index: 20; /* above most stuff */
+  bottom: 0px;
+  right: 0px;
+  background: #A2C;
+  padding: 10px 20px;
+  color: white;
+  font-size: 1.2rem;
+  pointer-events: none;
+  -webkit-transition: opacity 0.4s;
+          transition: opacity 0.4s;
+}
+
+/* other-products__products
+------------------------- */
+
+
+@charset "UTF-8";
+
+/* page-nav
+------------------------- */
+
+
+
+
+
+
+/* site-footer
+------------------------- */
+
+.site-footer {
+  position: relative;
+  padding: 50px 0;
+  background: #FFFFFF;
+  z-index: 20; /* above page-nav */
+}
+
+body {
+  font-family: 'Courier New', sans-serif;
+  background-color: #fff3e6;
+  color: #000000;
+  font-size: 90%;
+}
+
+
+/* selected */
+
+aside a {
+    text-align: center;
+     text-decoration: none;
+}
+
+
+aside {
+  background-color: #FFFFFF ;
+}
+
+
+section {
+  background-color: #fff3e6;
+}
+
+
+
+
+aside li {
+  clear: both;
+  display: block;
+  text-align: center;
+  font-size: 90%;
+  font-style: italic;
+  font-variant: small-caps;
+  padding-top: 10px;
+}
+
+
+aside  li:hover{
+  text-decoration: underline;
+  font-size: 120%;
+}
+
+aside p{
+  padding-left: 10px;
+}
+
+
+.chapter1{
+  padding: 10px;
+  margin-top: 100px;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+img .grid {
+  background-color: #FFFFFF;
+}
+
+/* sub-nav
+------------------------- */
+
+
+/* ui-group
+------------------------- */
+
+
+@charset "UTF-8";
+/* variable
+------------------------- */
+
+
+
+
+section{
+ float: center;
+ padding-top: 25px;
+ padding-left: 100px;
+ padding-right: 100px;
+}
+
+
+
+/* about me section items */
+ .me {
+  float: left;
+  margin-bottom: 5px;
+  margin-left: 30px;
+  margin-right: 30px;
+  margin-top: 30px;
+   opacity: 1;
+}
+
+.aboutme {
+  width: 700px;
+  padding-right: 100px;
+  float: right;
+  text-align: left;
+
+}
+
+
+
+
+/* title stuff */
+
+
+
+header h1{
+  text-decoration: none;
+  font-size: 120%;
+  display: inline;
+  font-variant: small-caps;
+  letter-spacing: 2px;
+
+}
+
+header h3{
+  text-decoration: none;
+  font-size: 80%;
+  letter-spacing: 2px;
+  margin-right: 10px;
+  padding-right: 10px;
+}
+
+nav ul{
+    list-style: none;
+}
+
+
+nav ul li{
+  display: inline;
+  font-variant: small-caps;
+  letter-spacing: 2px;
+  border-right: 1px solid #999999;
+  margin-right: 10px;
+  padding-right: 10px;
+}
+
+nav ul li:last-child{
+  border-right: none;
+  margin-right: 0;
+  padding-right: 0;
+}
+
+nav a{
+  color: #111111;
+  text-decoration: none;
+}
+
+nav a:hover, nav .current a{
+  text-decoration: underline;
+
+}
+
+#container {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+/*article settings */
+
+
+.article {
+  background-color: #FFFFFF;
+  margin-left: 100px;
+  margin-right: 100px;
+  padding-right: 200px;
+  text-align: left;
+
+}
+
+.articletitle{
+  text-align: center;
+  padding: 50px}
+
+.articletext{
+  text-align: left;
+  padding-left: 50px;
+
+}
+
+.openingimage{
+    position: center;
+    position: relative;
+    margin-left: 100px;
+    margin-right: 100px;
+    padding-top: 50px;
+    padding-bottom: 10px;
+}
+
+
+/* changing the images to light up when hovered */
+
+.element-item img  {
+  opacity: 0.9;
+}
+
+img:hover {
+  opacity: 1;
+}
+
+.element-item h2{
+  font-size: 100%;
+}

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="css/isotope-docs.css" media="screen">
+<html class="export">
+
+<div class="topflexbox">
+  <head>
+    <title>Ketts webheader</title>
+
+  </head>
+
+
+  <body data-page="index">
+
+
+
+   <header class="header">
+    <div class="maintitle">
+      <h1>Joshua Kettlewell</h1>
+      <h3>Ph.D Student,<br>  Singapore University <br>   of Technology and Design</h3>
+    </div>
+
+
+    <div class="navs">
+      <nav>
+        <ul>
+          <li class="site-nav__item site-nav__item--filtering">
+            <a href="index.html">Projects</a></li>
+          <li class="site-nav__item site-nav__item--filtering">
+            <a href="aboutme.html">About me</a></li>
+          <li class="site-nav__item">
+              <a href="http://qti.sutd.edu.sg/">Group Webpage</a></li>
+          <li class="site-nav__item ">
+                <a  href="https://scholar.google.com.sg/citations?user=tQ_YGVIAAAAJ&hl=en">Publications</a></li>
+          <li class="site-nav__item ">
+                <a  href="https://scholar.google.com.sg/citations?user=tQ_YGVIAAAAJ&hl=en">Contact</a></li>
+       </ul>
+     </nav>
+    </div>
+
+  </header>
+
+
+</div>
+
+
+<section >
+  <div class="article">
+    <h1 class="articletitle">Making an E-ink display </h1>
+
+
+<div class="articletext">
+    <p> So I was inspired to build a eink twitter feed as preparation to making an eink display for the next prototype of the cryptclip. I saw this thread on reddit <a href="https://www.reddit.com/r/raspberry_pi/comments/2n5bru/embedded_eink_display_in_a_raspberry_pi_b_case/">here</a> which covers everything quite well. And <a href="https://www.reddit.com/r/raspberry_pi/comments/2n87ff/everyone_wanted_a_step_by_step_for_the_eink/">here</a> is another article that gives the step by step instructions. I've trascribed them below to make it easier for other people doing this, and for me to remember how I got it working. </p>
+
+    <div class="openingimage">
+      <img src="images/proto2.jpg" alt ="homomorphic" width="50%" height="50%">
+    </div>
+
+    <h2>What?</h2>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/bgUol_3SUEs" frameborder="0" allowfullscreen></iframe>
+
+
+    <p>This an eink screen connected to raspberry pi. The pi then uses the tweepy python library to pull down data from twitter which is then displayed on the eink screen. This is nice as the eink doesnt draw power when displaying, only when changing, so it has a long battery life.
+     </p>
+
+    <h2>Step 1: Buying the componets.</h2>
+
+    <p>The easy bit. Items used are as follows:
+<ul>
+<li>Raspberry Pi Model 2B+ running the WheezyPi operating system. I got mine from SGBotics <a href="https://www.sgbotic.com/index.php">here</a>.</li>
+<li>The screen a ribbon cable. The screen I bought from <a href="">embedded artists</a>. Embedded artists seem to make alot of cool e-ink an pi related products so I hope to try out some other tech from there in the future. Also - eveything is fantastically documented. The eink screen is documented <a href="">here</a>. The final piece is simply a ribbon cable to connect the pi to the screen via the GPIO pins. I had one knocking around but if you dont have one you can get them at any electronics shop, or online store. They should be available anywhere you can buy a Pi. </li>
+
+</ul>
+
+    </p>
+
+    <h2>Step 2: Terminal commands</h2>
+
+    <p>So after plugging it al together then the process is actually very simple. All we need to do is install everything onto the pi and essentially tell tweepy when to be scrapping off twitter. So - lets get right in there with the terminal commands:
+
+<ol>
+  <li>
+    Clone the git repository
+git clone https://github.com/mbeddedartists/gratis.git
+  </li>
+
+  <li>
+    Clone the git repository
+git clone https://github.com/mbeddedartists/gratis.git
+  </li>
+
+
+    <li>
+    Confirm that the module is setup
+sudo modprobe spi-bcm2708
+  </li>
+
+  <li>
+    Install dependicies
+    sudo apt-get install libfuse-dev
+    sudo apt-get install python-imaging
+  </li>
+
+  <li>
+ Build nd install from inside /home/pi/gratis/PlatformWithOS
+ COG_VERSION=V2 make rpi-epd_fuse
+ sudo modprobe spi-bcm2708
+
+ sudo ./driver-common/epd_fuse --panel=2.7 -o alolow_other -o
+ sudo mkdir /tmp/epd
+
+ sudo COG_VERSION=V2 make rpi-install
+ sudo service epd-fuse start ls -l /dev/epd
+  </li>
+
+  <li>
+    Now test the configuration
+
+    cat /tmp/epd/version
+    cat /tmp/epd/panel
+    COG_VERSION=V2 make rpi-epd_test
+
+
+  </li>
+
+  <li>At this point you should set up a twitter account (if you dont already have one)
+<a href="https://apps.twitter.com/">Change the account stuff here once logged in</a>.
+  </li>
+
+  <li>
+Now rename some stuff
+
+mv tweepy_auth.py-SAMPLE tweepy_auth.py
+tweepy_auth.py-SAMPLE
+</li>
+
+  <li>
+Modify the demo file called tweepy_auth.py
+
+basic = False
+CONSUMER_KEY=''
+CONSUMER_SECRET =''
+ACCESS_TOKEN=''
+ACCESS_TOKEN_SECRET=''
+</li>
+
+<li>
+install tweepy
+pip install tweepy
+
+</li>
+
+
+</ol>
+
+
+    </p>
+
+    <h2>And thats it!</h2>
+
+    <p>If you were folling this guide you <em>should</em> now have a working twitter eink feed!
+
+
+</div>
+
+
+
+ </div>
+
+
+
+</section>
+
+
+
+
+  </div>
+</body>
+</html>

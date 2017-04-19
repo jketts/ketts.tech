@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="css/isotope-docs.css" media="screen">
+<html class="export">
+
+<div class="topflexbox">
+  <head>
+    <title>Ketts webheader</title>
+
+  </head>
+
+
+  <body data-page="index">
+
+
+
+   <header class="header">
+    <div class="maintitle">
+    <h1>Joshua Kettlewell</h1>
+    <h3>Ph.D Student,<br>  Singapore University <br> of Technology and Design</h3>
+    </div>
+
+
+    <div class="navs">
+
+
+      <nav>
+    <ul>
+      <li class="site-nav__item site-nav__item--filtering">
+        <a href="index.html">Projects</a></li>
+        <li class="site-nav__item site-nav__item--filtering">
+        <a href="aboutme.html">About me</a></li>
+        <li class="site-nav__item">
+          <a href="http://qti.sutd.edu.sg/">Group Webpage</a></li>
+          <li class="site-nav__item ">
+            <a  href="https://scholar.google.com.sg/citations?user=tQ_YGVIAAAAJ&hl=en">Publications</a>
+          </li>
+          <li class="site-nav__item ">
+            <a  href="https://scholar.google.com.sg/citations?user=tQ_YGVIAAAAJ&hl=en">Contact</a>
+          </li>
+        </ul>
+    </nav>
+    </div>
+
+  </header>
+</div>
+
+
+
+<section >
+  <div class="article">
+    <h1 class="articletitle"> Making a beer Fridge </h1>
+
+    <div class="openingimage">
+      <img src="images/beer.jpg" alt ="homomorphic" width="50%" height="50%">
+    </div>
+
+<div class="articletext">
+    <p> Abstract: Me, my friend <a href="https://dsa.tech/">DSA</a> and housemate built a fridge whoes temperature can be changed and viewed online. Truely with now have an internet of things!
+    The project was names after "Ferris Bueller's Day Off" which apparently is a good movie...? I'll be honest I still haven't seen it. </p>
+
+
+    <h2>What?</h2>
+
+    <p>So I've been homebrewing (not just code!) for a while now. Me and my housemate have been homebrewing beer since mid 2014. It was actually one of the first things I looked into after moving to Singapore - I was aware there was a scene for it here due to the frankly exhorborant prices.
+      Previously we had been using an aircon intensive room for the initial stage of the brew, and sterilised bottles for the carbonation stage.
+      This actually worked pretty well but it was a lot of effort! <br>
+      Its all worth it in the end though - the ability to say "lets go back to mine! Ive got all the beer you can drink at home!" is something akin to social status gold for students in a country where beer is usually over S$12 a pint.
+      <br>
+      But this article isn't really about beer... its more about making a fridge to improve production! Theres lots of information online about how to make beer so I won't explain what people have already done.
+     </p>
+
+    <h2>Step 1: Get a fridge</h2>
+
+    <p>This was the easy pretty part - I just rented a van via GOGOvan and looked on carosel. The fidge was a SANSUNG and less than a year old and in prefect condition. The fidge was SGD$100 and the van was approx SGD$70. </p>
+
+    <h2>Step 2: Taking the back off</h2>
+
+    <p>We then took the back off the fridge to get at the compressor circuitry - this was pretty easy, needing only a screw driver and a little leverage. The plan was to get access to the compressor and control when it turned on depending on the fridge temperature. Fridge not cold enough? Compressor on. Fridge too cold? Compressor off?
+      (This obviously means that around the target temperature the compressor is going to be oscillating on and off - so a temperature target width was used to address this).
+      The sensor and compressor control are connected unsing an audunio thats using the temperature information do decide what to do.
+      <br><br>
+
+      So far so good, this is all pretty easy. But this temperature window may need changing depending on what beer is being made and the time the brewing cycle.
+       But the idea of changing this by taking the back off the fridge and pluggind the audunio back into a laptop doesnt really sound practicle - we needed some way to change the commands on the audunio easily, and preferably remotely.
+       Thats where the photon comes in.
+
+      </p>
+
+    <h2>Step 2: Unsing the Photon</h2>
+
+    <p> This is where the photon comes in; this allows us to easily change to brewing tempurature online. Again, I'm not going to explain how to use the photon here as it has a nice write up on <a href="https://dsa.tech/iot-devices/">using the photon</a>, its an interesting bord but we had some problems getting it working.
+. The fridge is now live online and can be viewed <a href="https://dsa.tech/ferris/">here</a>.
+The project has been a pretty huge success in production, and we've certainly been brewing more beer for parties and general uses. We've also changed from bottles to kegging with a C02 serving system - this allows people to fill the glass to try a small amount instead of having a whole bottle to themselves
+ - which has definitely increased consumption by guests. </p>
+
+
+</div>
+
+
+
+ </div>
+
+
+
+</section>
+
+
+
+
+  </div>
+</body>
+</html>
