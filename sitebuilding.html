@@ -70,57 +70,66 @@
 
     <p>
     I've been meaning to build a website for YEARS... it just seems to be one of those things that everyone wants to do but never gets round to.
-    I first started one when I first went to university but never got past index.html mostly due to my work with <a href="bummit.html">BUMMIT</a> taking up most of my free time.
+    I first started one when I first went to university but never got past <em> index.html </em> mostly due to my work with <a href="bummit.html">BUMMIT</a> taking up most of my free time.
      Then after finishing my Masters and having a little time before I moved to Singapore I started doing a little more programming in my free time again.
       I wrote a bullet-storm game in Java using this guide <a href="https://www.youtube.com/playlist?list=PLlrATfBNZ98eOOCk2fOFg7Qg5yoQfFAdf">by thechernoproject</a>,
       and also an almost complete personal site.
       However - it was more of the standard academic page with contacts, publications, interest and nothing else.
       As I was nearly complete, I realised what I made wasnt really what I wanted, which was somewhere I could show off projects I had been working on and store useful code that I had written.
       So I decided to scrap most of the CSS and HTML that I had down to do a rewrite. But once again, life got in the way and I moved to singapore before I could finish...
-
-      <br><br>
-      Now, coming towards the end of my PhD, this page should finally be online- and about time too.
+</p>
+  <p>
+      Now, coming towards the end of my PhD, this page should finally be online. About time too.
     </p>
 
     <h3>"Why don't I just use wordpress"</h3>
 
-    <p>My friend actually asked me this after I showed him the first draft of this site (which was rather garish as I had been debugging some of the pading areas by using different garish background colours in each  div).
-      And honestly - I hadn't even considered it as an option. I'd always just thought that if I was going to have a site then I was going to make the site.
-      After quite a while of building I'm not sure if my opinion has changed - its taken a little time to make as I had not written CSS, HTML or Javascript in a while.
-      And honestly... I'm not sure if it looks as nice as a premade template which I could have filled out in an afternoon and saved myself a lot of effort.
-       But, I've certainly learnt a lot more code and I do get proudly say that I built the site myself - and thats probably better in the long term.</p>
+    <p>My friend asked me this after I showed him the first draft of this site (which was rather garish as I had been debugging some of the pading areas by using
+      different garish background colours in each div tag).
+      Honestly - I hadn't even considered it as an option. I'd always just thought that if I was going to have a site then I was going to make the site.
+      After quite a while of building I'm not sure if my opinion has changed - its taken a little time to make as I had not written CSS, HTML or Javascript in a long while.
+       I'm not sure if it looks as nice as a premade template which I could have filled out in an afternoon and saved myself a lot of effort.
+       But, I've certainly learnt a lot more code and I do get proudly say that I built the site myself, which thats probably better in the long term.
+     <br>
+   I also want to ability to add content at will as I start new projects, and I think this method should give me more freedom to do this. However, as I write content I'm now unsure if I should be using
+   a content manager instead of writing everything directly into <em>html</em>.
+ </p>
 
     <h3>Code and setup</h3>
 
     <p>So the code for the site is available <a href="https://github.com/jketts/ketts.tech">here</a>. I am frequently updating the git to and pulling onto the hosting server instead of uploading directly.
       I'm aware this probably isn't an elegant solution - but it does have the advantage of allowing me to go to an earlier edition incase I make some disastrous changes that
-       break everything (probably the javascript).
-
- <br><br>
-
-       To allow the articles to sort via catagory and display nicely on the page I used the isotope plugin which is available <a href="http://isotope.metafizzy.co/">here</a>.
+       break everything (probably would probably be in the javascript).
+     </p>
+       <p>
+       To allow the articles to sort via catagory and display nicely on the page I used the <strong>isotope plugin</strong> which is available <a href="http://isotope.metafizzy.co/">here</a>.
        Its very easy to get working using the documantation on the site. The jist of it is that you may easily create a new element which will be auto-positioned for in a grid which
        you define on the page. You can then tag each element to allow it to be sorted into a catagory.
-       These elements dont have to all be the same size  - and the javascript will mosaic them quite neatly if they are different sizes -
+       These elements dont have to all be the same size as the javascript will mosaic them quite neatly if they are different sizes,
        but I found it made my page look a little cleaner when every article link was the same size.
-
-       <br><br>
+     </p>
+       <p>
        The domain name was purchased through <a href="https://www.namecheap.com">namecheap</a> and the server is from <a href="https://cloud.digitalocean.com/droplets">digital ocean</a>,
-       both were super simple to set up and had lots of prompts on the site to make sure I knew what I was doing <a href="https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-16-04">such as this one which I used.</a> <br>
-       I would like so say a huge thankyou too data David from <a href="https://dsa.tech/">dsa.tech</a> for the recommendation on the hosting and ample
+       both were super simple to set up and had lots of prompts on the site to make sure I knew what I was doing <a href="https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-16-04">such as this one which I used.</a>
+       I would hugely advise checking out the last link if you are also planning to make a site.
+     </p>
+       <p>
+       I would like so say a huge thankyou too DSA from <a href="https://dsa.tech/">dsa.tech</a> for the recommendation on the hosting and ample
         help with the apache commands to get everything up and running.
+      </p>
+        <p>
+  So lets look briefly at the commands to set up the site. Bear in mind that I've named this site <strong>ketts.tech</strong> so thats the name you should replace if you are using
+  these instructions to put up your own site.
+</p>
+  <p>
 
-  <br><br>
-  So lets look briefly at the commands to set up the site. Bare in mind that, as I've named this site ketts.tech
-  - thats the name you should replace if you are using these instructions to put up your own site.
-
-
-  Assuming you've already purchase the domain name, and the have the server that will host the site, and you've connected them, then first SSH into the server.
-  This should be as easy as <strong> ssh root@ketts.tech </strong>. second; update the password on the site from the default. You're now running as root and you'll need to add a new user:
-   <strong> adduser NEWUSERNAME </strong> then give that user sudo privilages using <strong> usermod -aG sudo ketts </strong>. There, done.
-
-    <br><br>
-
+  Assuming you've already purchase the domain name, and the have the server that will host the site you now have to connected them. This should be easy using the IP address that should have been emailed
+  to you - and digital ocean holds your hand in this process to connect the domain name to the server. With that done we then first SSH into the server from our local machine which
+  should be as easy as <strong> ssh root@ketts.tech </strong>. Second; update the password on the site from the default (the default password will have been emailed to you).
+   You're now running as root and you'll need to add a new user: <strong> adduser NEWUSERNAME </strong> then give that user sudo privilages using <strong> usermod -aG sudo NEWUSERNAME </strong>.
+   There, done. That wasn't so bad.
+ </p>
+   <p>
     Now, in a seperate terminal window, you may ssh into the server as this new user and follow the instructions below:
 
 <ul>
@@ -141,16 +150,27 @@
     <li><strong>  sudo a2ensite 000-default.conf </strong> </li>
 <li><strong> sudo service apache2 reload </strong> quickly restart apache, the website should now be live! </li>
 <li>Now, if you're like me you may be contantly wanting to fiddle with bits of the site.
-  To do this, just ssh back in, navigate to the corect dirrectoty using <strong> cd var/www/ketts.tech </strong> then use <strong> sudo git pull </strong> to update
+  To do this, just ssh back in, navigate to the correct directory using <strong> cd var/www/ketts.tech </strong> then use <strong> sudo git pull </strong> to update
 . </li>
-<li> Sometimes it doesn't want to update - as it thinks an edit has been made to the files! To ignore this (as we only ever want to pull from the git to the server)
+<li> Sometimes it doesn't want to update as the OS believes an edit has been made to the git files.  To ignore this (as we only ever want to pull from the git to the server)
   <strong> sudo git stash </strong> and then <strong> sudo git pull </strong> again. </li>
 
 </ul>
 
+</p>
+<h3>Site Management</h3>
+  <p>
+ I'm currently using the last two steps to update the site regularly, by pushing to the git, then pulling onto the server. However, I am unsure how this method will scale in the future.
+ I think the likely outcome is that I will stop making edits regularly soon, and then just add one article at a time. But I also may benifit for have some method to manage content on the site.
+ <br>
+ I'm not sure if such a system would restrict what I can do on the site though, as I would like to has some interactive parts soon which may involve python.
+  </p>
+
+  <p>
+    Overall though, I have a site online, so I have to call this project a success. 
+  </p>
 
 
-     </p>
 
 
 

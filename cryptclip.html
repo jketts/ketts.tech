@@ -58,37 +58,206 @@
 
 <section >
   <div class="article">
-    <h1 class="articletitle">Coming soon! </h1>
+    <h1 class="articletitle"> Cryptclip</h1>
 
 <div class="articletext">
-    <h2> This is a write up of a project I did as part of a graduate class at SUTD, course 30.502 (Research Methods). </h2>
+    <h2> Encrypting messages before they even reach your phone.  </h2>
 
-    <p>coming soon. </p>
+    <p>In 2016 SUTD ran the first instance of its 10K startup contest, inspired by the 100K run annually by MIT. The contest is simple - pitch a business idea. If the judges, several of Singapore's
+    leading VCs, decide yours is best you get 10K of seed funding.
+  </p>
+    <p>
+      The contest has two rounds. First you present a business plan showing the idea, with market analysis and a rough go to market strategy (this filters out the bad ideas).
+       In the second round teams are paired with a VC advisor who will inform them what they look for in a team, a product and a business plan. After a few months of work you then pitch your idea and strategy
+       to an audience and judges, and submit a genuine business plan.
+    </p>
+      <p>
+        I had no previous experience writing a business plan or knowing what VC's look for in a startup so was keen to enter and learn more about this area.
+        But I wanted to develop an idea which would be relevant to my PhD, so that would be technology utilising either quantum mechanics or cryptography. Unfortunatley qubits a tricky and I work with
+        theory - so cryptography it was.
+      </p>
 
     <div class="openingimage">
-      <img src="cryptclip/proto2.jpg" alt ="homomorphic" width="50%" height="50%">
+      <img src="cryptclip/proto2.jpg" alt ="homomorphic" width="75%" height="75%">
     </div>
 
 
-    <p>Abstract below:</p>
+    <p>My thoughts for a pitch were as follows:</p>
 
     <p>
-      It first started off as a basic idea.. whatsapp, silent circle, black phone
+         Privacy and data protection are fundamental issues for individuals, companies, and public institutions. However, the vast majority of available solutions to
+        these problems are software-based, meaning that they rely on encryption techniques run by software installed on the devices used to exchange data.
+         To cite a recent example, WhatsApp introduced end-to-end encryption on all the communications performed through its application.
+         However this provides security only on the assumption of non-compromised devices.
+         For example, they assume the absence of malware, operating system backdoors, and no user errors.
+          In this sense, it is astonishing that today employees remain the most cited source of information-security compromise for companies,
+          often as a consequence of vulnerabilities such as phishing. Most people are concerned about security both at work and home - this being an issue of acute
+          importance when the same devices are used both in work and leisure.
+        </p>
+     <p>
+Every time we exchange information, we make implicit assumptions about the security of the technology in our hands.
+ To list a few, we assume that:
+<ul>
+<li> Telecoms communication is not monitored. </li>
+<li> Apps that claim to do encryption are doing encryption properly. </li>
+<li> The apps we are using have no backdoors. </li>
+<li>The device, mobile phone or computer, we are using has not been infected with malware that is snooping on your activities. </li>
+<li> Our phone, computer or operating system is not backdoored.  </li>
+<li> More generally, we agree that even if all the above is true, the crypto-schemes used to protect information cannot be broken (for instance,
+   we accept that numbers cannot be decomposed into their prime factors efficiently, the underlying assumption of RSA). </li>
+</ul>
 
-      Here is a scan of the <a href="cryptclip/quick_desgin.pdf">original design</a>
+ Currently, the average customer choose a level of security they feel is appropriate for what they are sending.
+ For information that <em>must</em> be totally secure (military communications, business IP ideas, sensitive diplomatic conversations), the only reliable option is to speak in person.
+</p>
+  <p>
+ With these ideas in mind, I was thinking about a device, that allows two parties to exchange information with unconditional security against eavesdroppers.
+ The basic idea is to move the core of the cryptographic power from the software to the hardware which is achieved by introducing a separate cryptographic device used as a mobile
+ phone or computer accessory. The device should be user-friendly,
+and could for example replace the widely used mobile phone case, or it could be implemented on a power bank hence avoiding the obstacle of its portability.
+The strategic vision of the security approach amounts to stopping personal communication devices, such as smart phones, from receiving any plain text (secret message) or encryption keys.
+ Instead, the encryption (and decryption) of the secret messages happens inside the device. In this way the communication device will always receive only securely encrypted information, such that an eavesdropper on the line,
+or an agent with backdoor access cannot expose your confidential information content.
+</p>
+  <p>
+    So - I made a team, wrote down the idea, and called the device <strong>CryptClip!</strong>.
+  </p>
+    <p>
+      ...Because it clips on your phone... I know its not a great name...
+  </p>
 
-      The original idea was to make a product similar to this, except using an eink screen to increase battery life and reduce processing power.
-       <iframe width="560" height="315" src="https://www.youtube.com/embed/kTtJQS1EaCw" frameborder="0" allowfullscreen></iframe>
+  <h3>Starting the project</h3>
+    <p>
+    I initially though the competition would be won or lost on our prototype. I mean <em>anyone can have an idea, surely its how well your team can implement an idea thats important!</em>
+    (this turns out not to be the case).
+  </p>
+    <p>
+       Me and the team did some mind mapping and <a href="https://www.youtube.com/watch?v=yCgENHW0nzY">6-3-5 design generation</a> to formulate some designs arriving at
+       <a href="cryptclip/quick_desgin.pdf">this design</a>. I then began to prototype using touchscreen LED display, a microUSB battery pack,and an Pi to preform one-time-pad encryption on arbitrary files.
+       (so the device also doubles as a powerbank when not in use). As the technology should allow encryption of arbitrary data, encrypting live audio/video was the end goal, with plans to also
+       implement Wegman-Carter authentication which ensures all messages haven't been altered during transmission.
+  </p>
 
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/_oH5-bpchcc" frameborder="0" allowfullscreen></iframe>
 
-       This may help explain why I had spent some time messing with the Audunio and the eink display previously.
+    <p>
+
+      The original idea was to make a product similar to the one shown below.
+
     </p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/kTtJQS1EaCw" frameborder="0" allowfullscreen></iframe>
+
+    <p>
+      Unfortunatley theres a big difference between these two designs. That being that my prototype looks ugly as hell. We realised that in order to get a nice touch LCD display we were going to need a lot more PCB know how.
+       I started trying to learn about PCB manufacturing using Eagle. However, this was quickly become a serious project, so we decided to scale back and rethink.
+  </p>
+
+  <div class="openingimage">
+    <img src="cryptclip/eagle.gif" alt ="homomorphic" width="75%" height="75%">
+  </div>
+  <p>
+   The next move was to use a nano pi and an eink screen. This would allow a very thin profile and low power consuption. I did some fiddling with an off the shelf
+   <a href="cryptclip/eink_twitter.html">eink display</a> which was much more promising. <a href="cryptclip/eink_twitter.html">Check out this article for a description of how i got it working</a>.
+</p>
+<p>
+<strong>And that was it </strong>. Yes, disappointing I know. We didn't develope the app for messaging on the phone and to allow the phone and device to communicate and we never got a micro keyboard working.
+We certainly didn't get live audio done.
+</p>
+
+    <div class="openingimage">
+      <img src="cryptclip/proto2.jpg" alt ="homomorphic" width="75%" height="75%">
+    </div>
+
+<p>
+  Was this a problem? No. It turns out the VC's didn't want a prototype. Our advisor knew it was possible to make
+  - but he cared more about the fundamentals of the company, the market for such a product,
+  and our plans for phasing the business into profit.
+</p>
+
+  <h2>Business planning</h2>
+
+  <p>
+   I didn't realise but my goal for this project had moved. It was now no longer about building a cool device - it was about winning the 10K prize.
+   To this end we conducted survery, examined our competitors, and assesed the market. The major sectors to target were fincance, government and militry, IP nd I.T, and healthcare. For a more detailed discussion,
+   with citations, here is a link to a final business plan for the project <a href="cryptclip/plan_V03.pdf">here</a>
+   </p>
+</p>
+<div class="openingimage">
+  <img src="cryptclip/info_img.png" alt ="homomorphic" width="100%" height="100%">
+</div>
+<p>
+We then analysed the markets. With regards to the <strong>banking industry</strong>, the PwC State of Information Security Survey reports that average information security spending is up 14% in the financial services sector,
+between years 2015 to 2016, while the "Banking and Financial Services Cybersecurity: U.S. Market 2015-2020 Report", published by Homeland Security Research Corp.,
+ found that in 2015 spending by the industry in the U.S. alone totalled US$9.5bn - the largest non-government cybersecurity market.
+ In Singapore, over 1200 financial institutions - including over 200 banks, 150 insurance entities, and 400 trading firms - have a presence, employing over 200,000 people
+ and accounting for over 12%
+  of the national GDP. Due to the large market, minimal bureaucracy, fast uptake of security tech and large budgets, we intended to make finance and banking a priority target.
+</p>
+<p>
+In <strong>healthcare</strong> we found increasing proportion of the interaction between patient and medical professional now takes place remotely,
+including appointments and diagnoses. Doctors and specialists may also confer with one another remotely, over unsecured communications channels.
+ Healthcare payers and providers have increased their information security budgets by 79% over the years 2014 to 2016. We therefore stated that there is significant potential
+  for growth in data-sharing practices in this industry.
+</p>
+<p>
+  For  <strong>I.P and I.I</strong>  we reference a 2013 report by The Commission on the Theft of American Intellectual Property concluded that IP theft costs the United States more than US$300bn per year,
+    while in 2011 a UK Cabinet Office report on the cost of cyber crime estimated that British companies lose GBP9.2bn (US$13bn) yearly for the same reason.
+     With respect to Singapore, a report prepared by the Center for Strategic and International Studies concluded that cyber crime in general costs the country SGD$1.25bn annually.
+     A major industry in which IP security is an acute concern is pharmaceuticals and biotechnology sector.
+</p>
+<p>
+  <strong>Government and Military</strong> applications were not as strong. The time required to achieve a sale in these sectors would be significantly longer than in our primary targets.
+   The uptake of technology that has not been designed in-house, or by existing trusted partners, requires a higher-level authorisation and more bureaucracy.
+   These bodies are also reluctant to use technologies that are openly available on the market, an issue that would likely be particularly acute with the military.
+    For these reasons, the government and military sectors were not within our target markets.
+</p>
 
 
+  <p>
+   Using the survey data and the our analysis of the industries we tabulised our findings to show example market size (shown below, with estimates for selected geographical regions, in number of employees unless stated)
+   and associated considerations for several key industries that are susceptible to being targeted for the theft of sensitive data (financial, personal, IP-related).
+   Unless stated, monetary figures given are in US$, incidents/losses/budget figures refer to information/cyber-security (CySec), quoted increases are 2015 vs. 2014.
+   'Respondents' refers to those of our survey.
+  </p>
 
-<p>Link to a poster describing the project <a href="cryptclip/poster.pdf">here</a>, link to a final business plan for the project <a href="cryptclip/poster.pdf">here</a>
+  <div class="openingimage">
+    <img src="cryptclip/table.png" alt ="homomorphic" width="100%" height="100%">
+  </div>
 
-  and a summary of survery data <a href="cryptclip/Table_survey_v01.pdf">here</a>
+
+<h2>Did we win? Yes and no</h2>
+  <p>
+   Well, I won't even get into the business planning research we did: how to structure the company after each series of investment or after seed. What amount of money we need when. How we should price units and staff.
+ </p>
+
+ <p>
+   The short answer is no. <strong>We didn't win the money</strong>.
+   I would be lying if I said I wasn't disappointed (I would have really liked the money), but there are reasons why other teams preformed better.
+  </p>
+
+<p>
+  <ul>
+  <li>  <strong> We focussed too much on details </strong></li>
+  This was our major fault.  We focussed to deeply on small points and intrices (such as the cryptography and the prototype)
+  but we failed to convince the judges of the problem or our solution.
+  <li> <strong> Other teams had more buzz </strong></li>
+  We had all the numbers, and a protoype - but it didn't sell as well as a sharp animated video persentation with quality editing. I believe we could have won if we had a video worthy of
+  kickstart success. But then - so could any of the teams there that night.
+  <li> <strong> Other teams had a final product already </strong></li>
+  This was impressive as some of our competitors had been developing their business for years and this wasn't there first attempt to get funding. It showed.
+  <li> <strong> You don't need a prototype </strong></li>
+  The best course of action is to get the money then pay someone else to do it. Spend your time doing things you're good at.
+  <li> The final point was one I recieved directly from our advisor: <strong> Vc's invest in the people, not the idea.</strong></li>
+  Our conversations were very frank, and apparently if you can convince the a VC that you are person who acts professionally, behaves confidently, and works hard then they
+  believe success is inevitable. They really do believe in the American dream so to speak. At least our advisor did.
+  </ul>
+</p>
+<p>
+ But in a project like this you never really loose. Our team got to the final, I did learn a lot about many things, from einks to buiness plans, to PCB manufacturing.
+</p>
+<p>
+Also the day after the presentation I recieved two emails from VC's in the audience saying I they would like to talk to me if I am planning a startup in the future.
+That is something that makes it all worth the while.
 </p>
 
 
