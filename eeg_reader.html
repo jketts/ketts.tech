@@ -10,6 +10,16 @@
 
 </script>
 
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script type="text/javascript"
+  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+
 <link rel="stylesheet" href="css/isotope-docs.css" media="screen">
 <html class="export">
 
@@ -43,11 +53,9 @@
         <li class="site-nav__item">
           <a href="http://qti.sutd.edu.sg/">Group Webpage</a></li>
           <li class="site-nav__item ">
-            <a  href="https://scholar.google.com.sg/citations?user=tQ_YGVIAAAAJ&hl=en">Publications</a>
-          </li>
+            <a  href="https://scholar.google.com.sg/citations?user=tQ_YGVIAAAAJ&hl=en">Publications</a></li>
           <li class="site-nav__item ">
-            <a  href="https://scholar.google.com.sg/citations?user=tQ_YGVIAAAAJ&hl=en">Contact</a>
-          </li>
+          <a  href="contact.html">Contact</a></li>
         </ul>
     </nav>
     </div>
@@ -227,7 +235,12 @@ Certain noticeable outliers were also manually removed prior to data analysis. A
 
 
 <p>
-  In order to transform the raw time varying sensor data into the frequency domain, the Fast Fourier Transform (FFT) algorithm was used. The raw time series data was divided into three parts, each corresponding to a particular type of sound (song A, white noise or song B), and each lasting for 60 seconds.
+  In order to transform the raw time varying sensor data into the frequency domain, the Fast Fourier Transform (FFT) algorithm was used. The FFT of a signal x is defined as indicated below:
+
+  \begin{align}
+X_k\ \stackrel{\text{def}}{=}\ \sum_{n=0}^{N-1} x_n \cdot e^{-i 2 \pi k n / N},  \quad k\in\mathbb{Z}\,
+\end{align}
+   The raw time series data was divided into three parts, each corresponding to a particular type of sound (song A, white noise or song B), and each lasting for 60 seconds.
 The FFT was perfored on each of these parts separately to reveal the relative squared amplitudes or powers corresponding to each frequency.
  Due to some inconsistencies in the sampling time of the sensor, it was assumed that the sensors transmit at a constant rate throughout a particular recording.
  In order to incorporate the above mentioned assumption, a scaling factor was used to scale the horizontal axis of the time series data according to its sampling rate.
@@ -271,13 +284,37 @@ Points outside 1.5 times the 25-75 percentile range were taken to be anomalous. 
   </p>
   <p>
     In order to test for the difference in mean intensity of the delta waves induced by the first song, the second song and the white noise,
-     we design the hypothesis testing and run them using the Wilcoxon test. This is a non-parametric statistical test for paired samples (the samples collected are pair since EEG data is collected on the same subject for different musical
-    stimulus). The choice of a non-parametric test is justified by the small sample size, for which normal distribution of the underlying population cannot be assumed.
-  </p>
-  <p>
-    Unfortunatley I have to recommend you read the paper for details on this - as writing equations in html isn't pretty. 
+     we design the hypothesis testing and run them using the Wilcoxon test. In particular, we wish to test the following three hypotheses,
+     where $\mu_1, \mu_2, \mu_{wn}$ are respectively the mean intensity of the delta waves generated during the first song, the second song and the white noise:
 
-</p>
+    \begin{align}
+    \label{f1}
+    H_0: \quad \mu_1 = \mu_2 , \qquad H_1: \quad \mu_1 \neq \mu_2
+    \end{align}
+    \begin{align}
+    \label{f2}
+    H_0: \quad \mu_1 = \mu_{wn} , \qquad H_1: \quad \mu_1 \neq \mu_{wn}
+    \end{align}
+    \begin{align}
+    \label{f3}
+    H_0: \quad \mu_2 = \mu_{wn} , \qquad H_1: \quad \mu_2 \neq \mu_{wn}
+    \end{align}
+
+    The Wilcoxon test is a non-parametric statistical test for paired samples (the samples collected are <em>paired</em> since EEG data is collected on the same subject for
+    different musical stimulus). The choice of a non-parametric test  is justified by the small sample size, for which normal distribution of the underlying population cannot be assumed.
+     The Wilcox test pool together the two samples considered (of size $n$ and $m$)  and compute for each observed value its respective rank.
+      For $Z_i, i=1...n$ being the observed value from the first sample, and for $Z_{n+j}, j=1,...m$ being the observed values from the second sample,
+      we compute the respective ranks $Ri := rank(Z_i)$. The test statistic is then:
+
+
+    \begin{align}
+    T^{Wilcoxon} = \sum_i^{n} R_i
+    \end{align}
+
+    Large values of $T^{Wilcoxon}$ mean that the observed value of the first group are generally larger than the ones from the second group,
+    and hence indicate evidence against $H_0$.
+  </p>
+
 
     <h3>Conclusions</h3>
     <p>

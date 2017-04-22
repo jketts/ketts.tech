@@ -1,0 +1,91 @@
+TClusterStateSimulation
+v7
+r0
+t367332850.376470
+cCheck dependencies
+cCompileC build/ClusterStateSimulation.build/Debug/ClusterStateSimulation.build/Objects-normal/x86_64/main.o /Users/joshuawaddington/Documents/ClusterStateSimulation/main.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+cCompileC build/ClusterStateSimulation.build/Debug/ClusterStateSimulation.build/Objects-normal/x86_64/qbit.o /Users/joshuawaddington/Documents/ClusterStateSimulation/qbit.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+
+N/Developer/SDKs/MacOSX10.6.sdk
+c000000004C5342BA00000000000000EE
+t1280524986
+s238
+
+N/Users/joshuawaddington/Documents/ClusterStateSimulation/build/ClusterStateSimulation.build/Debug/ClusterStateSimulation.build/Objects-normal/x86_64/ClusterStateSimulation.LinkFileList
+c000000005034D66F0000000000000138
+t1345640047
+s312
+
+N/Users/joshuawaddington/Documents/ClusterStateSimulation/build/ClusterStateSimulation.build/Debug/ClusterStateSimulation.build/Objects-normal/x86_64/main.o
+t1345640050
+s67016
+
+N/Users/joshuawaddington/Documents/ClusterStateSimulation/build/ClusterStateSimulation.build/Debug/ClusterStateSimulation.build/Objects-normal/x86_64/qbit.o
+t2
+s0
+
+N/Users/joshuawaddington/Documents/ClusterStateSimulation/build/Debug/ClusterStateSimulation
+t2
+s0
+
+N/Users/joshuawaddington/Documents/ClusterStateSimulation/main.cpp
+c000000005033763C000000000000008F
+t1345549884
+s143
+i<iostream>
+
+N/Users/joshuawaddington/Documents/ClusterStateSimulation/qbit.cpp
+c000000005034D66F000000000000016C
+t1345640047
+s364
+i"qbit.h"
+i<cmath>
+
+N/Users/joshuawaddington/Documents/ClusterStateSimulation/qbit.h
+c000000005034D66F000000000000029B
+t1345640047
+s667
+
+CCheck dependencies
+r0
+lSLF07#2@18"Check dependencies367332847#367332847#0(0"0(0#1#0"17221298176#0"0#
+
+CCompileC build/ClusterStateSimulation.build/Debug/ClusterStateSimulation.build/Objects-normal/x86_64/main.o /Users/joshuawaddington/Documents/ClusterStateSimulation/main.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+s367332847.770635
+e367332850.359040
+r1
+xCompileC
+xbuild/ClusterStateSimulation.build/Debug/ClusterStateSimulation.build/Objects-normal/x86_64/main.o
+x/Users/joshuawaddington/Documents/ClusterStateSimulation/main.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@73"Compile /Users/joshuawaddington/Documents/ClusterStateSimulation/main.cpp367332847#367332850#0(0"0(0#0#65"/Users/joshuawaddington/Documents/ClusterStateSimulation/main.cpp17223192064#1759"    cd /Users/joshuawaddington/Documents/ClusterStateSimulation    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/joshuawaddington/Documents/ClusterStateSimulation/build/ClusterStateSimulation.build/Debug/ClusterStateSimulation.build/ClusterStateSimulation-generated-files.hmap -I/Users/joshuawaddington/Documents/ClusterStateSimulation/build/ClusterStateSimulation.build/Debug/ClusterStateSimulation.build/ClusterStateSimulation-own-target-headers.hmap -I/Users/joshuawaddington/Documents/ClusterStateSimulation/build/ClusterStateSimulation.build/Debug/ClusterStateSimulation.build/ClusterStateSimulation-all-target-headers.hmap -iquote /Users/joshuawaddington/Documents/ClusterStateSimulation/build/ClusterStateSimulation.build/Debug/ClusterStateSimulation.build/ClusterStateSimulation-project-headers.hmap -F/Users/joshuawaddington/Documents/ClusterStateSimulation/build/Debug -I/Users/joshuawaddington/Documents/ClusterStateSimulation/build/Debug/include -I/Users/joshuawaddington/Documents/ClusterStateSimulation/build/ClusterStateSimulation.build/Debug/ClusterStateSimulation.build/DerivedSources/x86_64 -I/Users/joshuawaddington/Documents/ClusterStateSimulation/build/ClusterStateSimulation.build/Debug/ClusterStateSimulation.build/DerivedSources -c /Users/joshuawaddington/Documents/ClusterStateSimulation/main.cpp -o /Users/joshuawaddington/Documents/ClusterStateSimulation/build/ClusterStateSimulation.build/Debug/ClusterStateSimulation.build/Objects-normal/x86_64/main.o0#
+
+CCompileC build/ClusterStateSimulation.build/Debug/ClusterStateSimulation.build/Objects-normal/x86_64/qbit.o /Users/joshuawaddington/Documents/ClusterStateSimulation/qbit.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+s367332847.973998
+e367332848.106693
+r0
+xCompileC
+xbuild/ClusterStateSimulation.build/Debug/ClusterStateSimulation.build/Objects-normal/x86_64/qbit.o
+x/Users/joshuawaddington/Documents/ClusterStateSimulation/qbit.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.gcc.4_2
+oIn file included from /Users/joshuawaddington/Documents/ClusterStateSimulation/qbit.cpp:10:
+o/Users/joshuawaddington/Documents/ClusterStateSimulation/qbit.h:23: error: 'x' has not been declared
+o/Users/joshuawaddington/Documents/ClusterStateSimulation/qbit.cpp: In constructor 'Qbit::Qbit()':
+o/Users/joshuawaddington/Documents/ClusterStateSimulation/qbit.cpp:16: error: 'i' was not declared in this scope
+o/Users/joshuawaddington/Documents/ClusterStateSimulation/qbit.cpp: At global scope:
+o/Users/joshuawaddington/Documents/ClusterStateSimulation/qbit.cpp:20: error: ISO C++ forbids declaration of 'entanglement_value' with no type
+o/Users/joshuawaddington/Documents/ClusterStateSimulation/qbit.cpp:20: error: prototype for 'int Qbit::entanglement_value(int)' does not match any in class 'Qbit'
+o/Users/joshuawaddington/Documents/ClusterStateSimulation/qbit.h:22: error: candidate is: bool Qbit::entanglement_value(int)
+o/Users/joshuawaddington/Documents/ClusterStateSimulation/qbit.cpp:20: error: 'int Qbit::entanglement_value(int)' cannot be overloaded
+o/Users/joshuawaddington/Documents/ClusterStateSimulation/qbit.h:22: error: with 'bool Qbit::entanglement_value(int)'
+lSLF07#2@73"Compile /Users/joshuawaddington/Documents/ClusterStateSimulation/qbit.cpp367332847#367332848#0(1166"In file included from /Users/joshuawaddington/Documents/ClusterStateSimulation/qbit.cpp:10:/Users/joshuawaddington/Documents/ClusterStateSimulation/qbit.h:23: error: 'x' has not been declared/Users/joshuawaddington/Documents/ClusterStateSimulation/qbit.cpp: In constructor 'Qbit::Qbit()':/Users/joshuawaddington/Documents/ClusterStateSimulation/qbit.cpp:16: error: 'i' was not declared in this scope/Users/joshuawaddington/Documents/ClusterStateSimulation/qbit.cpp: At global scope:/Users/joshuawaddington/Documents/ClusterStateSimulation/qbit.cpp:20: error: ISO C++ forbids declaration of 'entanglement_value' with no type/Users/joshuawaddington/Documents/ClusterStateSimulation/qbit.cpp:20: error: prototype for 'int Qbit::entanglement_value(int)' does not match any in class 'Qbit'/Users/joshuawaddington/Documents/ClusterStateSimulation/qbit.h:22: error: candidate is: bool Qbit::entanglement_value(int)/Users/joshuawaddington/Documents/ClusterStateSimulation/qbit.cpp:20: error: 'int Qbit::entanglement_value(int)' cannot be overloaded/Users/joshuawaddington/Documents/ClusterStateSimulation/qbit.h:22: error: with 'bool Qbit::entanglement_value(int)'8(4@25"'x' has not been declared367332848#92#101#2(7@87"In file included from /Users/joshuawaddington/Documents/ClusterStateSimulation/qbit.cpp367332848#18446744073709551615#0#0(6@65"/Users/joshuawaddington/Documents/ClusterStateSimulation/qbit.cpp367332847#10#0#10#0#0"0(13@92"'x' has not been declared in /Users/joshuawaddington/Documents/ClusterStateSimulation/qbit.h367332848#18446744073709551615#0#0(6@63"/Users/joshuawaddington/Documents/ClusterStateSimulation/qbit.h367332847#23#0#23#0#0"0(6@63"/Users/joshuawaddington/Documents/ClusterStateSimulation/qbit.h367332847#23#0#23#0#25"'*' has not been declared0(4@34"'i' was not declared in this scope367332848#291#112#0(6@65"/Users/joshuawaddington/Documents/ClusterStateSimulation/qbit.cpp367332847#16#0#16#0#34"'*' was not declared in this scope0(23@16"At global scope:367332848#403#84#0(6@65"/Users/joshuawaddington/Documents/ClusterStateSimulation/qbit.cpp367332847#0#0#0#0#0"0(4@64"ISO C++ forbids declaration of 'entanglement_value' with no type367332848#487#142#0(6@65"/Users/joshuawaddington/Documents/ClusterStateSimulation/qbit.cpp367332847#20#0#20#0#47"ISO C++ forbids declaration of '*' with no type0(4@84"Prototype for 'int Qbit::entanglement_value(int)' does not match any in class 'Qbit'367332848#629#162#0(6@65"/Users/joshuawaddington/Documents/ClusterStateSimulation/qbit.cpp367332847#20#0#20#0#0"0(4@48"Candidate is: bool Qbit::entanglement_value(int)367332848#791#124#0(6@63"/Users/joshuawaddington/Documents/ClusterStateSimulation/qbit.h367332847#22#0#22#0#0"0(4@56"'int Qbit::entanglement_value(int)' cannot be overloaded367332848#915#134#0(6@65"/Users/joshuawaddington/Documents/ClusterStateSimulation/qbit.cpp367332847#20#0#20#0#0"0(4@41"With 'bool Qbit::entanglement_value(int)'367332848#1049#117#0(6@63"/Users/joshuawaddington/Documents/ClusterStateSimulation/qbit.h367332847#22#0#22#0#0"0(0#0#65"/Users/joshuawaddington/Documents/ClusterStateSimulation/qbit.cpp4512570976#1759"    cd /Users/joshuawaddington/Documents/ClusterStateSimulation    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/joshuawaddington/Documents/ClusterStateSimulation/build/ClusterStateSimulation.build/Debug/ClusterStateSimulation.build/ClusterStateSimulation-generated-files.hmap -I/Users/joshuawaddington/Documents/ClusterStateSimulation/build/ClusterStateSimulation.build/Debug/ClusterStateSimulation.build/ClusterStateSimulation-own-target-headers.hmap -I/Users/joshuawaddington/Documents/ClusterStateSimulation/build/ClusterStateSimulation.build/Debug/ClusterStateSimulation.build/ClusterStateSimulation-all-target-headers.hmap -iquote /Users/joshuawaddington/Documents/ClusterStateSimulation/build/ClusterStateSimulation.build/Debug/ClusterStateSimulation.build/ClusterStateSimulation-project-headers.hmap -F/Users/joshuawaddington/Documents/ClusterStateSimulation/build/Debug -I/Users/joshuawaddington/Documents/ClusterStateSimulation/build/Debug/include -I/Users/joshuawaddington/Documents/ClusterStateSimulation/build/ClusterStateSimulation.build/Debug/ClusterStateSimulation.build/DerivedSources/x86_64 -I/Users/joshuawaddington/Documents/ClusterStateSimulation/build/ClusterStateSimulation.build/Debug/ClusterStateSimulation.build/DerivedSources -c /Users/joshuawaddington/Documents/ClusterStateSimulation/qbit.cpp -o /Users/joshuawaddington/Documents/ClusterStateSimulation/build/ClusterStateSimulation.build/Debug/ClusterStateSimulation.build/Objects-normal/x86_64/qbit.o1#
+
+CLd /Users/joshuawaddington/Documents/ClusterStateSimulation/build/Debug/ClusterStateSimulation normal x86_64
+r0
+

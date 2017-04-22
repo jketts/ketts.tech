@@ -1,0 +1,5 @@
+/Users/joshuawaddington/Documents/ClusterStateSimulation/Cluster.cpp:147: error: no 'void Cluster::sort_entanglements()' member function declared in class 'Cluster'
+/Users/joshuawaddington/Documents/ClusterStateSimulation/Cluster.cpp: In member function 'void Cluster::sort_entanglements()':
+/Users/joshuawaddington/Documents/ClusterStateSimulation/Cluster.cpp:153: error: a function-definition is not allowed here before '{' token
+/Users/joshuawaddington/Documents/ClusterStateSimulation/Cluster.cpp:158: error: a function-definition is not allowed here before '{' token
+/Users/joshuawaddington/Documents/ClusterStateSimulation/Cluster.cpp:150: warning: unused variable 'values'

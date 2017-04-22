@@ -1,0 +1,195 @@
+TClusterStateSimulation
+v7
+r0
+t373048605.285428
+cCheck dependencies
+cCompileC build/ClusterStateSimulation.build/Debug/ClusterStateSimulation.build/Objects-normal/x86_64/main.o /Users/joshuawaddington/Documents/ClusterStateSimulation/main.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+cCompileC build/ClusterStateSimulation.build/Debug/ClusterStateSimulation.build/Objects-normal/x86_64/qbit.o /Users/joshuawaddington/Documents/ClusterStateSimulation/qbit.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+cCompileC build/ClusterStateSimulation.build/Debug/ClusterStateSimulation.build/Objects-normal/x86_64/Cluster.o /Users/joshuawaddington/Documents/ClusterStateSimulation/Cluster.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+cCompileC build/ClusterStateSimulation.build/Debug/ClusterStateSimulation.build/Objects-normal/x86_64/ClusterCounting.o /Users/joshuawaddington/Documents/ClusterStateSimulation/ClusterCounting.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+cLd /Users/joshuawaddington/Documents/ClusterStateSimulation/build/Debug/ClusterStateSimulation normal x86_64
+
+N/Developer/SDKs/MacOSX10.6.sdk
+c000000004C5342BA00000000000000EE
+t1280524986
+s238
+
+N/Users/joshuawaddington/Documents/ClusterStateSimulation/Cluster.cpp
+c00000000508C0CFA0000000000000EB7
+t1351355642
+s3767
+i"Cluster.h"
+i<cmath>
+i<cstdlib>
+i<iostream>
+i<vector>
+i<algorithm>
+
+N/Users/joshuawaddington/Documents/ClusterStateSimulation/Cluster.h
+c00000000508BD5C2000000000000031F
+t1351341506
+s799
+i"qbit.h"
+i"ClusterCounting.h"
+i<vector>
+
+N/Users/joshuawaddington/Documents/ClusterStateSimulation/ClusterCounting.cpp
+c00000000508C0C620000000000000305
+t1351355490
+s773
+i"ClusterCounting.h"
+i<cmath>
+i<cstdlib>
+i<iostream>
+i"ClusterCounting.h"
+
+N/Users/joshuawaddington/Documents/ClusterStateSimulation/ClusterCounting.h
+c00000000508C0C870000000000000258
+t1351355527
+s600
+i"qbit.h"
+
+N/Users/joshuawaddington/Documents/ClusterStateSimulation/build/ClusterStateSimulation.build/Debug/ClusterStateSimulation.build/Objects-normal/ppc/Cluster.o
+t2
+s0
+
+N/Users/joshuawaddington/Documents/ClusterStateSimulation/build/ClusterStateSimulation.build/Debug/ClusterStateSimulation.build/Objects-normal/ppc/ClusterStateSimulation.LinkFileList
+c00000000000000000000000000000000
+t2
+s0
+
+N/Users/joshuawaddington/Documents/ClusterStateSimulation/build/ClusterStateSimulation.build/Debug/ClusterStateSimulation.build/Objects-normal/ppc/main.o
+t2
+s0
+
+N/Users/joshuawaddington/Documents/ClusterStateSimulation/build/ClusterStateSimulation.build/Debug/ClusterStateSimulation.build/Objects-normal/ppc/qbit.o
+t2
+s0
+
+N/Users/joshuawaddington/Documents/ClusterStateSimulation/build/ClusterStateSimulation.build/Debug/ClusterStateSimulation.build/Objects-normal/x86_64/Cluster.o
+t1351355643
+s124944
+
+N/Users/joshuawaddington/Documents/ClusterStateSimulation/build/ClusterStateSimulation.build/Debug/ClusterStateSimulation.build/Objects-normal/x86_64/ClusterCounting.o
+t1351355528
+s49776
+
+N/Users/joshuawaddington/Documents/ClusterStateSimulation/build/ClusterStateSimulation.build/Debug/ClusterStateSimulation.build/Objects-normal/x86_64/ClusterStateSimulation.LinkFileList
+c00000000504DDAC9000000000000027E
+t1347279561
+s638
+
+N/Users/joshuawaddington/Documents/ClusterStateSimulation/build/ClusterStateSimulation.build/Debug/ClusterStateSimulation.build/Objects-normal/x86_64/main.o
+t1351355805
+s66500
+
+N/Users/joshuawaddington/Documents/ClusterStateSimulation/build/ClusterStateSimulation.build/Debug/ClusterStateSimulation.build/Objects-normal/x86_64/qbit.o
+t1351355528
+s70452
+
+N/Users/joshuawaddington/Documents/ClusterStateSimulation/build/Debug/ClusterStateSimulation
+t1351355805
+s43480
+
+N/Users/joshuawaddington/Documents/ClusterStateSimulation/main.cpp
+c00000000508C0D9C00000000000001D9
+t1351355804
+s473
+i<iostream>
+i"qbit.h"
+i"Cluster.h"
+
+N/Users/joshuawaddington/Documents/ClusterStateSimulation/qbit.cpp
+c00000000505708920000000000000302
+t1347881106
+s770
+i"qbit.h"
+i<iostream>
+i<cmath>
+i"Cluster.h"
+
+N/Users/joshuawaddington/Documents/ClusterStateSimulation/qbit.h
+c00000000508B05380000000000000334
+t1351288120
+s820
+
+CCheck dependencies
+r0
+lSLF07#2@18"Check dependencies373048604#373048604#0(0"0(0#1#0"4493485344#0"0#
+
+CCompileC build/ClusterStateSimulation.build/Debug/ClusterStateSimulation.build/Objects-normal/ppc/Cluster.o /Users/joshuawaddington/Documents/ClusterStateSimulation/Cluster.cpp normal ppc c++ com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/ClusterStateSimulation.build/Debug/ClusterStateSimulation.build/Objects-normal/ppc/main.o /Users/joshuawaddington/Documents/ClusterStateSimulation/main.cpp normal ppc c++ com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/ClusterStateSimulation.build/Debug/ClusterStateSimulation.build/Objects-normal/ppc/qbit.o /Users/joshuawaddington/Documents/ClusterStateSimulation/qbit.cpp normal ppc c++ com.apple.compilers.gcc.4_2
+r0
+
+CCompileC build/ClusterStateSimulation.build/Debug/ClusterStateSimulation.build/Objects-normal/x86_64/Cluster.o /Users/joshuawaddington/Documents/ClusterStateSimulation/Cluster.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+s373048442.847661
+e373048443.724314
+r1
+xCompileC
+xbuild/ClusterStateSimulation.build/Debug/ClusterStateSimulation.build/Objects-normal/x86_64/Cluster.o
+x/Users/joshuawaddington/Documents/ClusterStateSimulation/Cluster.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@76"Compile /Users/joshuawaddington/Documents/ClusterStateSimulation/Cluster.cpp373048442#373048443#0(0"0(0#0#68"/Users/joshuawaddington/Documents/ClusterStateSimulation/Cluster.cpp4493483616#1765"    cd /Users/joshuawaddington/Documents/ClusterStateSimulation    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/joshuawaddington/Documents/ClusterStateSimulation/build/ClusterStateSimulation.build/Debug/ClusterStateSimulation.build/ClusterStateSimulation-generated-files.hmap -I/Users/joshuawaddington/Documents/ClusterStateSimulation/build/ClusterStateSimulation.build/Debug/ClusterStateSimulation.build/ClusterStateSimulation-own-target-headers.hmap -I/Users/joshuawaddington/Documents/ClusterStateSimulation/build/ClusterStateSimulation.build/Debug/ClusterStateSimulation.build/ClusterStateSimulation-all-target-headers.hmap -iquote /Users/joshuawaddington/Documents/ClusterStateSimulation/build/ClusterStateSimulation.build/Debug/ClusterStateSimulation.build/ClusterStateSimulation-project-headers.hmap -F/Users/joshuawaddington/Documents/ClusterStateSimulation/build/Debug -I/Users/joshuawaddington/Documents/ClusterStateSimulation/build/Debug/include -I/Users/joshuawaddington/Documents/ClusterStateSimulation/build/ClusterStateSimulation.build/Debug/ClusterStateSimulation.build/DerivedSources/x86_64 -I/Users/joshuawaddington/Documents/ClusterStateSimulation/build/ClusterStateSimulation.build/Debug/ClusterStateSimulation.build/DerivedSources -c /Users/joshuawaddington/Documents/ClusterStateSimulation/Cluster.cpp -o /Users/joshuawaddington/Documents/ClusterStateSimulation/build/ClusterStateSimulation.build/Debug/ClusterStateSimulation.build/Objects-normal/x86_64/Cluster.o0#
+
+CCompileC build/ClusterStateSimulation.build/Debug/ClusterStateSimulation.build/Objects-normal/x86_64/ClusterCounting.o /Users/joshuawaddington/Documents/ClusterStateSimulation/ClusterCounting.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+s373048328.027033
+e373048328.423801
+r1
+xCompileC
+xbuild/ClusterStateSimulation.build/Debug/ClusterStateSimulation.build/Objects-normal/x86_64/ClusterCounting.o
+x/Users/joshuawaddington/Documents/ClusterStateSimulation/ClusterCounting.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@84"Compile /Users/joshuawaddington/Documents/ClusterStateSimulation/ClusterCounting.cpp373048328#373048328#0(0"0(0#0#76"/Users/joshuawaddington/Documents/ClusterStateSimulation/ClusterCounting.cpp4493483616#1781"    cd /Users/joshuawaddington/Documents/ClusterStateSimulation    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/joshuawaddington/Documents/ClusterStateSimulation/build/ClusterStateSimulation.build/Debug/ClusterStateSimulation.build/ClusterStateSimulation-generated-files.hmap -I/Users/joshuawaddington/Documents/ClusterStateSimulation/build/ClusterStateSimulation.build/Debug/ClusterStateSimulation.build/ClusterStateSimulation-own-target-headers.hmap -I/Users/joshuawaddington/Documents/ClusterStateSimulation/build/ClusterStateSimulation.build/Debug/ClusterStateSimulation.build/ClusterStateSimulation-all-target-headers.hmap -iquote /Users/joshuawaddington/Documents/ClusterStateSimulation/build/ClusterStateSimulation.build/Debug/ClusterStateSimulation.build/ClusterStateSimulation-project-headers.hmap -F/Users/joshuawaddington/Documents/ClusterStateSimulation/build/Debug -I/Users/joshuawaddington/Documents/ClusterStateSimulation/build/Debug/include -I/Users/joshuawaddington/Documents/ClusterStateSimulation/build/ClusterStateSimulation.build/Debug/ClusterStateSimulation.build/DerivedSources/x86_64 -I/Users/joshuawaddington/Documents/ClusterStateSimulation/build/ClusterStateSimulation.build/Debug/ClusterStateSimulation.build/DerivedSources -c /Users/joshuawaddington/Documents/ClusterStateSimulation/ClusterCounting.cpp -o /Users/joshuawaddington/Documents/ClusterStateSimulation/build/ClusterStateSimulation.build/Debug/ClusterStateSimulation.build/Objects-normal/x86_64/ClusterCounting.o0#
+
+CCompileC build/ClusterStateSimulation.build/Debug/ClusterStateSimulation.build/Objects-normal/x86_64/main.o /Users/joshuawaddington/Documents/ClusterStateSimulation/main.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+s373048604.892322
+e373048605.267021
+r1
+xCompileC
+xbuild/ClusterStateSimulation.build/Debug/ClusterStateSimulation.build/Objects-normal/x86_64/main.o
+x/Users/joshuawaddington/Documents/ClusterStateSimulation/main.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.gcc.4_2
+o/Users/joshuawaddington/Documents/ClusterStateSimulation/main.cpp: In function 'int main()':
+o/Users/joshuawaddington/Documents/ClusterStateSimulation/main.cpp:9: warning: unused variable 'test'
+lSLF07#2@73"Compile /Users/joshuawaddington/Documents/ClusterStateSimulation/main.cpp373048604#373048605#0(194"/Users/joshuawaddington/Documents/ClusterStateSimulation/main.cpp: In function 'int main()':/Users/joshuawaddington/Documents/ClusterStateSimulation/main.cpp:9: warning: unused variable 'test'1(22@22"Unused variable 'test'373048605#93#101#0(6@65"/Users/joshuawaddington/Documents/ClusterStateSimulation/main.cpp373048604#9#0#9#0#19"unused variable '*'0(0#0#65"/Users/joshuawaddington/Documents/ClusterStateSimulation/main.cpp4493483616#1759"    cd /Users/joshuawaddington/Documents/ClusterStateSimulation    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/joshuawaddington/Documents/ClusterStateSimulation/build/ClusterStateSimulation.build/Debug/ClusterStateSimulation.build/ClusterStateSimulation-generated-files.hmap -I/Users/joshuawaddington/Documents/ClusterStateSimulation/build/ClusterStateSimulation.build/Debug/ClusterStateSimulation.build/ClusterStateSimulation-own-target-headers.hmap -I/Users/joshuawaddington/Documents/ClusterStateSimulation/build/ClusterStateSimulation.build/Debug/ClusterStateSimulation.build/ClusterStateSimulation-all-target-headers.hmap -iquote /Users/joshuawaddington/Documents/ClusterStateSimulation/build/ClusterStateSimulation.build/Debug/ClusterStateSimulation.build/ClusterStateSimulation-project-headers.hmap -F/Users/joshuawaddington/Documents/ClusterStateSimulation/build/Debug -I/Users/joshuawaddington/Documents/ClusterStateSimulation/build/Debug/include -I/Users/joshuawaddington/Documents/ClusterStateSimulation/build/ClusterStateSimulation.build/Debug/ClusterStateSimulation.build/DerivedSources/x86_64 -I/Users/joshuawaddington/Documents/ClusterStateSimulation/build/ClusterStateSimulation.build/Debug/ClusterStateSimulation.build/DerivedSources -c /Users/joshuawaddington/Documents/ClusterStateSimulation/main.cpp -o /Users/joshuawaddington/Documents/ClusterStateSimulation/build/ClusterStateSimulation.build/Debug/ClusterStateSimulation.build/Objects-normal/x86_64/main.o0#
+
+CCompileC build/ClusterStateSimulation.build/Debug/ClusterStateSimulation.build/Objects-normal/x86_64/qbit.o /Users/joshuawaddington/Documents/ClusterStateSimulation/qbit.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+s373048327.449274
+e373048328.011781
+r1
+xCompileC
+xbuild/ClusterStateSimulation.build/Debug/ClusterStateSimulation.build/Objects-normal/x86_64/qbit.o
+x/Users/joshuawaddington/Documents/ClusterStateSimulation/qbit.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@73"Compile /Users/joshuawaddington/Documents/ClusterStateSimulation/qbit.cpp373048327#373048328#0(0"0(0#0#65"/Users/joshuawaddington/Documents/ClusterStateSimulation/qbit.cpp4493483616#1759"    cd /Users/joshuawaddington/Documents/ClusterStateSimulation    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/joshuawaddington/Documents/ClusterStateSimulation/build/ClusterStateSimulation.build/Debug/ClusterStateSimulation.build/ClusterStateSimulation-generated-files.hmap -I/Users/joshuawaddington/Documents/ClusterStateSimulation/build/ClusterStateSimulation.build/Debug/ClusterStateSimulation.build/ClusterStateSimulation-own-target-headers.hmap -I/Users/joshuawaddington/Documents/ClusterStateSimulation/build/ClusterStateSimulation.build/Debug/ClusterStateSimulation.build/ClusterStateSimulation-all-target-headers.hmap -iquote /Users/joshuawaddington/Documents/ClusterStateSimulation/build/ClusterStateSimulation.build/Debug/ClusterStateSimulation.build/ClusterStateSimulation-project-headers.hmap -F/Users/joshuawaddington/Documents/ClusterStateSimulation/build/Debug -I/Users/joshuawaddington/Documents/ClusterStateSimulation/build/Debug/include -I/Users/joshuawaddington/Documents/ClusterStateSimulation/build/ClusterStateSimulation.build/Debug/ClusterStateSimulation.build/DerivedSources/x86_64 -I/Users/joshuawaddington/Documents/ClusterStateSimulation/build/ClusterStateSimulation.build/Debug/ClusterStateSimulation.build/DerivedSources -c /Users/joshuawaddington/Documents/ClusterStateSimulation/qbit.cpp -o /Users/joshuawaddington/Documents/ClusterStateSimulation/build/ClusterStateSimulation.build/Debug/ClusterStateSimulation.build/Objects-normal/x86_64/qbit.o0#
+
+CLd /Users/joshuawaddington/Documents/ClusterStateSimulation/build/Debug/ClusterStateSimulation normal ppc
+r0
+
+CLd /Users/joshuawaddington/Documents/ClusterStateSimulation/build/Debug/ClusterStateSimulation normal x86_64
+s373048605.267104
+e373048605.285375
+r1
+xLd
+x/Users/joshuawaddington/Documents/ClusterStateSimulation/build/Debug/ClusterStateSimulation
+xnormal
+xx86_64
+lSLF07#2@96"Link /Users/joshuawaddington/Documents/ClusterStateSimulation/build/Debug/ClusterStateSimulation373048605#373048605#0(0"0(0#0#0"4493483616#648"    cd /Users/joshuawaddington/Documents/ClusterStateSimulation    setenv MACOSX_DEPLOYMENT_TARGET 10.6    /Developer/usr/bin/g++-4.2 -arch x86_64 -isysroot /Developer/SDKs/MacOSX10.6.sdk -L/Users/joshuawaddington/Documents/ClusterStateSimulation/build/Debug -F/Users/joshuawaddington/Documents/ClusterStateSimulation/build/Debug -filelist /Users/joshuawaddington/Documents/ClusterStateSimulation/build/ClusterStateSimulation.build/Debug/ClusterStateSimulation.build/Objects-normal/x86_64/ClusterStateSimulation.LinkFileList -mmacosx-version-min=10.6 -o /Users/joshuawaddington/Documents/ClusterStateSimulation/build/Debug/ClusterStateSimulation0#
+
