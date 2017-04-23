@@ -91,89 +91,76 @@
 
     <h2>Step 2: Terminal commands</h2>
 
-    <p>So after plugging it al together then the process is actually very simple. All we need to do is install everything onto the pi and essentially tell tweepy when to be scrapping off twitter. So - lets get right in there with the terminal commands:
+    <p>So after plugging it al together then the process is actually very simple. All we need to do is install everything onto the pi and essentially
+      tell tweepy when to be scrapping off twitter. So - lets get right in there with the terminal commands:
+</p>
 
-<ol>
-  <li>
-    Clone the git repository
-git clone https://github.com/mbeddedartists/gratis.git
-  </li>
+<p>
+   Clone the git repository
+<ul>
+  <li><strong>git clone https://github.com/mbeddedartists/gratis.git </strong></li>
+</ul>
+</p>
 
-  <li>
-    Clone the git repository
-git clone https://github.com/mbeddedartists/gratis.git
-  </li>
+<p>
+  Confirm that the module is setup
+<ul>
+  <li><strong>sudo modprobe spi-bcm2708  </strong></li>
+</ul>
+</p>
 
+<p>
+Install dependicies
+<ul>
+  <li> <strong> sudo apt-get install libfuse-dev  </strong></li>
+  <li> <strong> sudo apt-get install python-imaging  </strong></li>
+</ul>
+</p>
 
-    <li>
-    Confirm that the module is setup
-sudo modprobe spi-bcm2708
-  </li>
+<p>
+Build everything
+<ul>
+  <li><strong>/home/pi/gratis/PlatformWithOS</strong></li>
+<li> <strong>COG_VERSION=V2 make rpi-epd_fuse</strong></li>
+ <li><strong>sudo modprobe spi-bcm2708</strong></li>
+ <li><strong>sudo ./driver-common/epd_fuse --panel=2.7 -o alolow_other -o</strong></li>
+ <li><strong>sudo mkdir /tmp/epd</strong></li>
+ <li><strong>sudo COG_VERSION=V2 make rpi-install</strong></li>
+ <li><strong>sudo service epd-fuse start ls -l /dev/epd </strong></li>
+</ul>
+</p>
 
-  <li>
-    Install dependicies
-    sudo apt-get install libfuse-dev
-    sudo apt-get install python-imaging
-  </li>
+<p>
+Now test the configuration
+<ul>
+  <li> <strong> cat /tmp/epd/version</strong></li>
+  <li> <strong>  cat /tmp/epd/panel</strong></li>
+  <li> <strong>  COG_VERSION=V2 make rpi-epd_test </strong></li>
+</ul>
+  At this point you should set up a twitter account (if you dont already have one) <a href="https://apps.twitter.com/">Change the account stuff here once logged in</a>.
+</p>
 
-  <li>
- Build nd install from inside /home/pi/gratis/PlatformWithOS
- COG_VERSION=V2 make rpi-epd_fuse
- sudo modprobe spi-bcm2708
-
- sudo ./driver-common/epd_fuse --panel=2.7 -o alolow_other -o
- sudo mkdir /tmp/epd
-
- sudo COG_VERSION=V2 make rpi-install
- sudo service epd-fuse start ls -l /dev/epd
-  </li>
-
-  <li>
-    Now test the configuration
-
-    cat /tmp/epd/version
-    cat /tmp/epd/panel
-    COG_VERSION=V2 make rpi-epd_test
-
-
-  </li>
-
-  <li>At this point you should set up a twitter account (if you dont already have one)
-<a href="https://apps.twitter.com/">Change the account stuff here once logged in</a>.
-  </li>
-
-  <li>
-Now rename some stuff
-
-mv tweepy_auth.py-SAMPLE tweepy_auth.py
-tweepy_auth.py-SAMPLE
-</li>
-
-  <li>
-Modify the demo file called tweepy_auth.py
+<p>
+  Now rename some stuff
+<ul>
+<li><strong>mv tweepy_auth.py-SAMPLE tweepy_auth.py</strong></li>
+  <li><strong>tweepy_auth.py-SAMPLE</strong></li>
+  <li>Modify the demo file called tweepy_auth.py</li>
 
 basic = False
 CONSUMER_KEY=''
 CONSUMER_SECRET =''
 ACCESS_TOKEN=''
 ACCESS_TOKEN_SECRET=''
-</li>
-
-<li>
-install tweepy
-pip install tweepy
-
-</li>
+<li><strong>pip install tweepy</strong></li>
+</ul>
 
 
-</ol>
-
-
-    </p>
+</p>
 
     <h2>And thats it!</h2>
 
-    <p>If you were folling this guide you <em>should</em> now have a working twitter eink feed!</p>
+    <p>If you were folling this guide you <em>should</em> now have a working twitter eink feed! You can test it by running the demo file which should be in /home/pi/gratis/PlatformWithOS </p>
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/EcxkiBT2bM8" frameborder="0" allowfullscreen></iframe>
 </div>

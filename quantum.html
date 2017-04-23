@@ -69,341 +69,258 @@
 
 
       <p>
-
-
-        So this page is mostly of use to myself. It contains links to resources I've found useful in the past, links to selected papers that I have read, and more.
+  So this page is mostly of use to myself. It contains links to resources I've found useful in the past, links to selected papers that I have read, and more. It may be useful to other PhD
+  students in quantum information, so they don't get cuaght out when their professor mentions that "This is trivial! Just use *insert topic here*".
 </p>
 
-      <p>
-  Completxity classes
-
-  parity L class
-
-  P#
-
-  Boson sampling
-
-  Here is the article by Aarson and .. that made this area famous. Boson sampling has been experimentally run ..
-
-  However, <em>I believe</em> that all of these experiments fail to satisfy the conditions derived by rahimi keshari et al in model for boson sampling that accounts for
-  experimental parameters, which when they are not satisfied the problem demonstration the results may be sampled by a classical process. This model accounts for detector efficiency (including darkcounts),
-   source efficiency and waveguid efficiency.
-
-  The complaint about Boson samplong is that a state which has a positive P function its sample problem is neccasarily easy to simulate - as it may be viewed as a mixture of coherent states.
-
-   Some also contend that boson sampling is useless - its not even a unifrom random number generator. random numbers are weighted by the perminence.
-  this is not to do with additive error on amplitured - is see if the errors cause this to just become mix of coherent.
-
-  this is  SO losses and effieciencies.
 
 
-  Church turing thesis
+
+
+<h3>General topics important in quantum information processing </h3>
+<p>
+
+
+<ul>
+<li>  Church turing thesis </li>
   any physically realisable process can be simulated on a turing machine
 
-  extented Church turing thesis
+<li>   extented Church turing thesis </li>
   can do this effieiently. this would kill a lot of quantum supremecy.
 
-
-GHZ states
-gate teleportation
-CHSH violation
-
-homomorphic gentry - latice problems
-carlso no go theorem
-random walks on encrypted data
-
-efficiently building clusters
-
-church of the larger hilbert space
-
-
-
-  Eigens - 3 brown 1 blue
-
-
-  noisy unitaries and dephasing
-helmhotz
-Bhattacharyya_distance
-Kolmogorov
-Rényi
-Kullback–Leibler divergence
-shannon entropy
-sterling numbers of the second kind
-choi matrix and relation to bell states
-
-
-
-  duestch jonza
-  simons algorithm
-  shors algorithm
-  grovers algorithm
-
-  explanations of eigenvalues and eigen vectors
-
-goshgerin circle theorem
-trace distance and fidelity
-strong convexity of the trace
-geometrically unifrom states
-
-unambiguos dicrimination of states
-chernoff bound
-tysons bound
-quek paper on geometrically unifrom states
-quek paper on semidefifinite programming
-parity idea
-
-
-holevos bound
-different norms - one norm, two norm, infinity norm.
-
-BQC
-universal bqc
-verificiation of BQC
-
-one time programs
-quantum random access codes
-oblivious transfer
-bit commitment
-no go proofs on both
-yaos millionaire problem
-qunatum money wiesner
-arronson
-broadbent one time memories
-
-
-
-chinese remaineder theorem
-
-
-optimization methods
-runge kutta
-newton raphson
-evlution
-
-
-
-languages
-toby qubit
-qutip
-tweepy
-C++
-python
-cuda
-VHDL
-verilog
-labview
-chinese
-indonesian
-german
-
-
-
-
-  An analysis of compeletely trace preserving maps on m2, ruska, szarek
-
-
-  ----
-
-
-
-  Homomorphic encrytion using polarzation encoding.
-
-  Holevo to bound mutual information between alice and bob, and probabikity of guessing
-
-  next use phase space and can use continouse veriable states
-
-  ----
-
-
-
-  -----
-
-
-
-  large scale boson sampling would sampling would disporve the ect thesis. the are confusing ect and post classicality.
-
-  ----
-
-  look on the arxiv for his nature paper
-
-  ---
-        Coming soon!
-
-        wwww.peterrohde.org
-
-
-
-
-
-        linear optics
-         - photon preserving - rekt and zillinger paper using discrete bult optics, single equation... nsted mark zhender interferometers
-          -- or wave guides, evanesient coupling.
-          -- time bin encoding -- effiecient
-
-          m mod interferometer with polynomail run time and m^2 optical elements
-
-
-          ------
-          encoding
-
-          dual rail spatial encodng
-          --beam splitters for single qubit unitaries
-
-          polarisation
-          h v encoding, uses waveplates
-
-          time bin
-          easy to convert between encodings
-
-          single qubit gates easy.
-
-          everything is deterministic but cnots and cz
-
-
-          -----
-
-          KLM scheme, control phase gate using NS - applied phase shift to 1 basis state -  gates. Pretty much a mark zhender intefoermeter
-          This method is none deterministic. but can we deal with this.
-
-          use gate telepotation.
-          concatinated gate teleportation, concatinated gate failure tolerant code. by going state preperation stage.
-
-          But unfortunately bell gates are also noisy.
-
-          but this is less noisy that before. so just concatinate this.
-
-
-
-
-          ...
-
-
-          other method is cluster states. edges are cz gates.
-          identiies for clusster states. to make effectively use a partial bell measurement.
-
-          --------
-
-          mutliplexed photo detection and photon sources
-
-          number resolved photo detectors - expensive
-          so are push butttun sources
-          use multiplexing via linear optics to approximante number resoltion using a non-number resolving detectors.
-
-          Alternately you can convert to time bin encodings. make number of time slots large compared to numer of photons.
-
-          ----
-          use SPDC and post selct. but this is none deterministic.
-
-          -------
-
-          boson sampling
-
-          non universal model of LOQC
-
-          no feedforward
-          no memory
-          no entangling
-          no qubits
-          comletely passive
-          all fock state inputs
-
-
-
-          just sample the output. at output we get superpositions of all possible outputs. This belongs to #P (which is probably more complex than NP).
-
-          implies sampling is hard. can't be used to calculate matrix perminence. Sampling would need an exponential amount to find this.
-
-          U is Haar random. this is sampling problem, not a decision problem.
-
-
-          can sampling probelms be relating to probabilistic computing?
-
-
-          Arrson said this is hard.
-
-
-          ----
- other hard states to sample
-          Cat states - superpostion of cohernet states
-          photon added coherent
-          displace single photo states
-
-
-          ---
-          andthing with none negative p function
-          easy are coherent
-
-
-          ---
-
-          scattershort boson smapling
-
-          similar to multiplexing but no feed forward.
-          feddforward is replace with classical post processing
-
-          ----
-
-          verification of boson sampling
-
-          maybe not provably. there are lots of descion problems that arnt in hard
-
-            ----
-
-
-
-            Mordor - metrology
-
-            you have some unknown phase and want to know what it is/
-
-            try and beat the shot noise limit and get towards hiesenberg limit. ordinal resource counting (a sum). ORCS FROM MORdor. compare to Alpha beta gamma
-
-
-            intermediate scalling for metrology for no markovian -
-
-
-            ------
-
-            fibre loop schemes
-
-            waveguides and bulk optics are the norm. can also be done with fibre loops.
-
-            ---
-
-            why people who dont care are succesfful
-
-            ---
-
-
-            ancillary states
-
-
-            hybrid schemes
-
-            barret and kok - relaxation of states and wave plates. can make bell states. use atom ensemble qubits as they have long decoherence time.
-
-            ----
-
-            future -
-            transition to waveguides, kill bulk optics, sources and linear optics on chip.
-            doesnt believe in LOQC. boson sampling may be first psot classicality.
-
-            ----
-
-            algoritm for smapling problem
-
-            ---any classiacal probabilty distributiion is effiecent to sample. as long as you have a effiecent was of intergrating p. ???
-
-
-            no go theory for single rail optical to make universal,
-
-
-
-
-          </noscript>
-
-
-
-
+<li> Dicke states </li>
+<li> Fock states</li>
+<li> Coherent states</li>
+<li> Continous variable states</li>
+NP,P,Parity L, P#
+<li> Cat states</li>
+<li>Cooper pairs</li>
+ <li>Completxity classes</li>
+<li> GHZ states</li>
+<li> gate teleportation</li>
+<li>Haar randomness</li>
+<li> CHSH violation</li>
+<li>church of the larger hilbert space</li>
+<li>Mach Zehnder interferometer</li>
+<li>Michelson interferometer</li>
+linear optics
+ - photon preserving - rekt and zillinger paper using discrete bult optics, single equation... nsted mark zhender interferometers
+  -- or wave guides, evanesient coupling.
+  -- time bin encoding -- effiecient
+
+  m mod interferometer with polynomail run time and m^2 optical elements
+
+  hybrid schemes
+
+  barret and kok - relaxation of states and wave plates. can make bell states. use atom ensemble qubits as they have long decoherence time.
+
+    no go theory for single rail optical to make universal
+<li>Fizeau</li>
+<li>Fabry-Perot interferometer</li>
+<li>Hanbury Brown and Twiss effect</li>
+<li>Evanescent field</li>
+<li>Rieman hypothesis</li>
+</ul>
+  <p>
+
+<h3>Topics relating the homomorphic computing</h3>
+<ul>
+<li>homomorphic gentry - latice problems</li>
+<li>carlso no go theorem </li>
+<li>random walks on encrypted data</li>
+<li>Boson sampling</li>
+Here is the article by Aarson and Arkhipov https://arxiv.org/abs/1011.3245 that made this area famous. Boson sampling has been experimentally run ..
+
+verification of boson sampling: <em>I believe</em> that all of these experiments fail to satisfy the conditions derived by rahimi keshari et al in model for boson sampling that accounts for
+experimental parameters, which when they are not satisfied the problem demonstration the results may be sampled by a classical process. This model accounts for detector efficiency (including darkcounts),
+ source efficiency and waveguid efficiency.
+
+The complaint about Boson samplong is that a state which has a positive P function its sample problem is neccasarily easy to simulate - as it may be viewed as a mixture of coherent states.
+
+ Some also contend that boson sampling is useless - its not even a unifrom random number generator. random numbers are weighted by the perminence.
+this is not to do with additive error on amplitured - is see if the errors cause this to just become mix of coherent.
+
+scattershort boson smapling: similar to multiplexing but no feed forward. feedforward is replace with classical post processing
+
+verification of boson sampling
+
+maybe not provably. there are lots of descion problems that arnt in hard
+
+
+non universal model of LOQC
+
+no feedforward
+no memory
+no entangling
+no qubits
+comletely passive
+all fock state inputs
+
+
+
+just sample the output. at output we get superpositions of all possible outputs. This belongs to #P (which is probably more complex than NP).
+
+implies sampling is hard. can't be used to calculate matrix perminence. Sampling would need an exponential amount to find this.
+
+U is Haar random. this is sampling problem, not a decision problem.
+
+easy to convert between encodings
+
+</ul>
+
+
+
+<h3>Topics relating to statistical distances</h3>
+<ul>
+<li>noisy unitaries and dephasing</li>
+An analysis of compeletely trace preserving maps on m2, ruska, szarek
+<li>helmhotz</li>
+<li>Bhattacharyya distance</li>
+<li>Kolmogorov</li>
+<li>Renyi</li>
+<li>Kullback–Leibler divergence</li>
+<li>shannon entropy</li>
+<li>sterling numbers of the second kind</li>
+<li>choi matrix and relation to bell states</li>
+</ul>
+
+<h3>Important Quantum Algorithms and protocols</h3>
+<ul>
+<li>Quantum fourier transfrom</li>
+<li>Amplitude amplicfication</li>
+<li>duestch jonza</li>
+<li>simons algorithm</li>
+<li>shors algorithm</li>
+<li>grovers algorithm</li>
+<li>seth lloyd sparse matrix </li>
+</ul>
+
+
+<h3>explanations of eigenvalues and eigen vectors</h3>
+<ul>
+<li>Eigens - 3 brown 1 blue</li>
+<li>Matrix perminence</li>
+<li>goshgerin circle theorem</li>
+<li>trace distance and fidelity</li>
+<li>strong convexity of the trace</li>
+<li>geometrically unifrom states</li>
+<li>unambiguos dicrimination of states</li>
+<li>chernoff bound</li>
+<li>tysons bound</li>
+<li>quek paper on geometrically unifrom states</li>
+<li>quek paper on semidefifinite programming</li>
+<li>parity idea</li>
+</ul>
+
+<h3>Information theory</h3>
+<ul>
+<li>holevos bound</li>
+To bound mutual information between alice and bob
+<li>different norms - one norm, two norm, infinity norm.</li>
+</ul>
+
+<h3>Quantum crypto protocols</h3>
+<ul>
+<li>BQC</li>
+<li>universal bqc</li>
+<li>verificiation of BQC</li>
+<li>one time programs</li>
+<li>quantum random access codes</li>
+<li>oblivious transfer</li>
+<li>bit commitment</li>
+<li>no go proofs on both</li>
+<li>yaos millionaire problem</li>
+<li>qunatum money wiesner</li>
+<li>arronson</li>
+<li>broadbent one time memories</li>
+</ul>
+
+
+<h3>classical crypto protocols</h3>
+<ul>
+<li>chinese remaineder theorem</li>
+<li>RSA</li>
+<li>Diffe Helman</li>
+<li>Snow 3G</li>
+<li>lattice based cryptography</li>
+</ul>
+
+<h3>classical optimization methods</h3>
+<ul>
+<li>runge kutta</li>
+<li>newton raphson</li>
+<li>evlution</li>
+</ul>
+
+
+<h3>Neural networks</h3>
+<p>
+This guide will walk you through the setup for neural-style on Ubuntu <a href="https://github.com/jcjohnson/neural-style/blob/master/INSTALL.md ">to edit images.</a>
+</p>
+
+  <p>Links from DSA</p>
+  <ul>
+    <li><a href="http://scs.ryerson.ca/~aharley/vis/conv/flat.html">Interactive visualization of CNN for MNIST</a></li>
+    <li><a href="http://blog.fastforwardlabs.com/post/148842796218/introducing-variational-autoencoders-in-prose-and">Nice introduction to autoencoders</a></li>
+    <li><a href="http://www.asimovinstitute.org/neural-network-zoo/">Fast overview of different NN topologies</a></li>
+    <li><a href="https://www.tensorflow.org/">Tensorflow</a></li>
+    <li><a href="http://playground.tensorflow.org/">Tensorflow Playground</a></li>
+    <li><a href="http://pymc-devs.github.io/pymc3/">PyMC3</a></li>
+    <li><a href="http://webppl.org/">WebPPL</a></li>
+    <li><a href="http://www.bioinfo.org.cn/~casp/temp/DeepLearning.pdf">Intro paper for Deep Learning</a></li>
+     <li><a href="http://neuralnetworksanddeeplearning.com/">By Michael Nielsen</a></li>
+  </ul>
+
+<h3>classical optimization methods</h3>
+<ul>
+<li>languages</li>
+<li>C++</li>
+<li>Matlab</li>
+<ul>
+  <li>Quack!</li>
+  A MATLAB package for quantum circuit simulation. Capabilities include state preparation,
+   unitary evolution and non-unitary processes, measurement, partial traces, entropy and purity calculation, and state readout.
+  Package includes MATLAB source code, examples and documentation.
+  http://www.peterrohde.org/media/software/
+<li>Quant inf </li>
+various functions, routines, and other bits of Matlab, Octave and Mathematica code organized by topic,
+that might save someone, somewhere, from re-inventing the wheel.
+http://www.dr-qubit.org/Matlab_code.html
+</ul>
+
+
+
+http://www.dr-qubit.org/Matlab_code.html
+<li>R</li>
+<li>Mathematica</li>
+https://www.youtube.com/watch?v=Zqkn8CoJp9k
+<li>Maple</li>
+<li>python</li>
+
+<ul>
+  <li>qutip</li>
+<li>tweepy</li>
+</ul>
+<li>cuda</li>
+<li>VHDL</li>
+<li>verilog</li>
+<li>labview</li>
+<li>chinese</li>
+<li>indonesian</li>
+<li>german</li>
+</ul>
+
+
+
+<h3>Encodings</h3>
+<ul>
+<li>dual rail spatial encodng</li>
+beam splitters for single qubit unitaries
+<li>polarisation</li>
+  h v encoding, uses waveplates
+<li>time bin</li>
+easy to convert between encodings
+</ul>
 
      </p>
 

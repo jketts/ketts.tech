@@ -278,11 +278,6 @@ for its current lattice point before it can continue.
 
 </p>
 
-<div class="openingimage">
-  <img src="phase/new_gif_4.gif" alt ="phase transition" width="80%" height="80%">
-</div>
-
-
 
 <h3>initialise and addnoise</h3>
 <p>
@@ -336,7 +331,7 @@ in the images folder.  Alternately use <em>new_graph_diff_A</em> or <em>new\_gra
 <h3>graph shrinking</h3>
 <p>
 <em>_graph_diff_A</em> and <em>new_graph_diff_B</em>  use an iteration routine which increases the z axis to make
- it appear as though the system is shrinking. graph\textunderscore diff uses the actual heights of the cells and is thus accurate to the system.
+ it appear as though the system is shrinking. <em>graph_diff</em> uses the actual heights of the cells and is thus accurate to the system.
 
 <h2>Issues</h2>
 
@@ -365,7 +360,10 @@ It should be noted that the system only works efficiently within certain paramet
  over the entire run (and worse still this would not be see until the data was examined). If the time steps are too large then the system becomes non-physical as the amounts of
   A,B and C component will not be conserved (granted; due to the evaporation scheme these are already not conserved but this refers to another lack of conservation which is
      not intentional). A balance must also be achieved between the amount of solvent removed from the top layer in each run and the
-     initial amount of solvent the is uniformly in the system when it is initialised. If the amount of solvent in the system is to high and the evaporation is too low then the system will take a very large number of runs to show the desired results of a propagating ordering layer, or the diffusion will appear to happen uniformly. However if the solvent evaporation is too high then all of the solvent will be removed from the top layer and the system will start returning errors as the equations of motion are no longer valid (in the top layer).
+     initial amount of solvent the is uniformly in the system when it is initialised. If the amount of solvent in the system is to high and the evaporation
+     is too low then the system will take a very large number of runs to show the desired results of a propagating ordering layer, or the diffusion will appear to happen uniformly.
+      However if the solvent evaporation is too high then all of the solvent will be removed from the top layer and the system will start returning errors as the equations of motion are
+      no longer valid (in the top layer).
 
 
 The system may also run but when graphed show a phase diffusion with a very "blotchy" nature. In this case the problem may be resolved by reducing the <em>delta_x</em>
@@ -373,11 +371,11 @@ and <em>delta_y</em> values.
 
 </p>
 
-<h3>Balancing</h3>
+=
 <p>
   dim3, the dimensions of the grid of blocks, and of the blocks themselves, used on the GPU were calculated
 directly from the values defined for the values of <em>length_x, length_y, length_z</em> are defined in headerfile.
-<em>length_x</em> gives the number of threads per block and l<em>length_y</em> , and l<em>length_z</em>  give the grid dimensions.
+<em>length_x</em> gives the number of threads per block and l<em>length_y</em> , and <em>length_z</em>  give the grid dimensions.
  A different scheme was used for the surface threads to efficiently use the blocks and another scheme was used in the second part of solvent-per-layer calculation in cudafiles2.
 </p>
 

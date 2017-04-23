@@ -115,7 +115,7 @@
          (for example RSA key distribution, a relative to Dickie-Helman encryption which forms the basis of many of our day to day protocols, gets broken by Shors Algorithm
           which finds the prime factors of a number efficiently. This would be really really bad as many things, such as your bank account, and whatapp message, become insecure to anyone
           with a quantum computer and you are in effect at the mercy of hackers). <br><br>
-          But prehaps if we USE quantum mechanics to do the encryption we can make a homomorphi encryption scheme which is secure, no matter what.
+          But prehaps if we USE quantum mechanics to do the encryption we can make a homomorphic encryption scheme which is secure, no matter what.
 
       <h3>What is homomorphic encryption?</h3>
 
@@ -136,12 +136,43 @@
 </p>
 
 
+    <div class="openingimage">
+      <img src="homomorphic/homomorphic_quantum.png" alt ="homomorphic" width="50%" height="50%">
+    </div>
+
+
+    
+  <p>
+  Here we use group theoretic insights to give a general framework for constructing quantum homomorphic encryption schemes.
+   These schemes that have two important advantages over their classical counterparts. First, they would allow non-classical computations to be performed, and second, their security
+    is based on physical laws and not on computational assumptions. Our novel method relies on finding encryption and computation operators that commute with each other,
+     and we show that computations from a unitary group of a large dimension are allowed.  Non-trivial encryption operators can then be constructed and we prove that for
+     a particular logical encoding, a constant fraction of the encrypted information can be hidden where this fraction can be made arbitrarily close to unity with overhead scaling
+      only polynomially in the message length.
+    </p>
+      <p>
+      A particular instance of our encoding
+hides up to a constant fraction of the information encrypted. This fraction can be made arbitrarily close to unity with overhead
+scaling only polynomially in the message length. This highlights the potential of our protocol to hide a non-trivial amount of
+information, and is suggestive of a large class of encodings that might yield better security.
+</p>
+
+
 <h3>And you can run any algorithm?</h3>
 
 <p>Well not exactly. This is where caveats appear. To run any algorithm we would need to make sure that the operations the commute with the encryption/decryption from a universal set (any operation).
    The easy way to do this is to find a few operations which together are generators of a unversal set and make sure those commute.
-    Now - our work allows a REALLY BIG set of operations. But to be honest we are not clear about whether it's a universal set of operations...
-     I orignally thought it should be, but it now appears that it isn't for group thoery reasons slightly beyond anyones grasp.  </p>
+ </p>
+   <p>
+In such a case the computation operations form a group, either the unitary group in the case of quantum computation or the symmetric group in the case of
+classical reversible computation, which does not usually commute with other operations... in fact any irreducible representation
+of these groups only commutes with operators proportional to the identity, precluding non-trivial encryption. However, for
+reducible representations of these groups, there can exist non-trivial operators which commute with the entire group.
+</p>
+  <p>
+Now - our work allows a REALLY BIG set of operations. But to be honest we are not clear about whether it's a universal set of operations...
+ I orignally thought it should be, but it now appears that it isn't for group thoery reasons slightly beyond anyones grasp.  </p>
+
 
 <p>So the paper is on the ArXiv <a href="http://arxiv.org/abs/1411.5254">here</a>.  The reason that I have the image of marbling is that homorphic encryption schemes always remind me of this video about <a href="https://www.youtube.com/watch?v=p08_KlTKP50">laminar flow</a>... which is a pretty cool topic in itself.  </p>
 
@@ -152,6 +183,7 @@
   methods such as <a href="https://arxiv.org/abs/0807.4154">universal blind quantum computing</a> by allowing operations to be preformed in a single round of communication
   between the client with the data and the server prefroming the hidden calculation.
 </p>
+
 
 
 
