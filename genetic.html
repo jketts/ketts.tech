@@ -65,14 +65,98 @@
 
 
       <p>
-        Coming soon!
+        Coming soon! This page is still under construction!
      </p>
 
 
-   </div>
+     <p>
+       This is a brief write up of a project me and <a href="https://dsa.tech/">DSA</a> undertook last year The idea was to apply and evolutionary algorithm to protfolio selection,
+        and for the buy/sell indictators for (moderately) high frequency trading on the same portfolio.
+    </p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Gl3EjiVlz_4" frameborder="0" allowfullscreen></iframe>
 
 
+     <p>
+       Evolution algorithms were, a few years ago, quite a niche area but they have recently exploded in propularity. Most early examples were used for finding specific solutions for movement of
+       simulated robotics (above) and to recreate images (below), however I wondered if there was a more financially practical use for them.
+    </p>
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/6rKJUTm3-LU" frameborder="0" allowfullscreen></iframe>
+
+
+   <p>
+     Evolution algorithms are adequately named. Imagine we have some problem that we wish to find a solution for. By making small random mutations to our current best
+      current a solution (whcih are reffered to as children) and picking the best of them, we may approach some function optimum. Algorithms vary in complexity - some only selection the best child for the
+      next generation, and some taking a distribution over the children depending on their preformance. Some take a different approach - saying that all children exist - but where they in turn may have children
+      depends on their proformance. After several genertions with either system the population of solutions should be fitted to find a solution to the function in the same manner that speicies find
+      their enviromental niche.
+  </p>
+
+<h3>This idea</h3>
+
+  <p>
+    The idea for this project was as follows: imagine a "boiler room" full of high frequency traders all working for some financial company. Each tradhas their own preferred
+    portfolio of stocks and buy sell indicators. At the end of each month each trainer has a preformance review which determines if they get fired, or if they have a larger budget
+    at their discresion. If a trader is fired, the company hires new people - similar to the top traders of that month. The only goal for the company is to make money - it doesn't care about who it fires.
+    <br>
+     We want to have a program that emulates this behaviour.
+ </p>
+
+ <h3>The method</h3>
+
+ <p>
+   First to develop this we developed some buy/sell indicators. These range from technical analysis techniques to fundamental analysis.
+   <br>
+   Our model the has what we call "bots" that represent traders. Each bot is assigned a random portfolio, with a buy/sell wieghting over all of the indicators compared to all the stocks in its
+   profolio (to be clear - with "all stocks" that means it may examine one stock to decided whether to buy another) to arrive at some buy/sell certainty. Depending on the lineage of the bot (if it comes from
+   a long line of successful traders) it will have a certain pool of funds to reallocate within its portfolio. These orders are then sent to the head of the bots (to be thoguht of as a manager).
+   <br>
+    This manager take all of the bot behaviours together in order to decide how to company should move its entire portfolio position over the entire market (there is no need for each trader to act individually
+    and incur additional brokerage fees).
+    <br>
+    After several iterations, the manager then evalutates which bots have been making the most profit. It then kills all bots - and completely refills all positions. Bots who did well in the last
+    preformance have many "children" - which are similar to the successful bot, but with small changes - either to indicators or to portfolio (or both). Bots that profrom poorly have few to no children.
+    The cycle then repeats.
+</p>
+
+<p>
+  This method appears to be quite successful (from our testing) - however, as the code is written in python and not parallelised, its to slow for true high frequency trding.
+  However, it is fast enough to trade on the scale of minutes.
+</p>
+
+<p>
+  We believe our only assumptions in this model are that
+  <ul>
+    <li> Some protofolios are balanced </li>
+    <li> Some combination of indicators may work on certain stocks </li>
+    <li> It is possible to make money on high frequency trading using if the above assumptions are true </li>
+  </ul>
+</p>
+
+<h3>What changes could be made</h3>
+
+<p>
+  Currently the model uses asexual reproduction of the bots - however, it would be possible to require a blending between bots to create children given a large enough
+  population of bots to allow diversity of functions (which should give a more stable mutation - as it would allow the size of random mutations to be reduced...
+   it would however analogise to a very incestuous office of traders).
+   <br>
+    Although numpy has been used to increase speed - the best solution here would be to use CUDA which would allow all bots to calculate trades independently and would dramatically increase
+    the speed at which trades could be made.
+</p>
+
+<h3>Code and implementation</h3>
+
+<p>
+  An important factor is to identify what amount of mutation is appropriate, if mutations in certain areas are more benificial than others, and how long should be bots trade to achieve a good measure
+  of success between generations. These are all questions that have yet to be answered.
+</p>
+
+<p>
+  <strong> This part of this page is still under construction.</strong>
+</p>
+
+</div>
   </section>
 
 
