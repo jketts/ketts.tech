@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-97650091-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<link rel="stylesheet" href="css/isotope-docs.css" media="screen">
+<html class="export">
+
+<div class="topflexbox">
+  <head>
+    <title>Joshua Kettlewell | Projects</title>
+
+  </head>
+
+
+  <body data-page="index">
+
+
+
+    <header class="header">
+     <a  href="index.html"><div class="maintitle">
+       <h1>Joshua Kettlewell</h1>
+       <h3>Ph.D Student,<br>  Singapore University <br>   of Technology and Design</h3>
+     </div></a>
+
+
+     <div class="navs">
+       <nav>
+         <ul>
+           <li class="site-nav__item site-nav__item--filtering">
+             <a href="index.html">Projects</a></li>
+           <li class="site-nav__item site-nav__item--filtering">
+             <a href="aboutme.html">About me</a></li>
+           <li class="site-nav__item">
+               <a href="http://qti.sutd.edu.sg/">Group Webpage</a></li>
+           <li class="site-nav__item ">
+                 <a  href="https://scholar.google.com.sg/citations?user=tQ_YGVIAAAAJ&hl=en">Publications</a></li>
+           <li class="site-nav__item ">
+                 <a  href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+     </div>
+
+   </header>
+</div>
+
+        <section >
+          <div class="article">
+            <h1 class="articletitle">Neural Networks to clean sink</h1>
+
+
+
+
+
+<div class="articletext">
+
+     <p>
+      So one of the reasons I love my housemates I because they do ridiculous things with technology.
+      This what happens when you live with 5 other PhD students and are too poor to do anything outside the house at the weekend.
+     </p>
+
+     <p>
+       The latest development is a neural network, which is being used to tell us when the sink is dirty.
+     </p>
+
+
+     <div class="openingimage">
+        <img src="neural/dirty_sink.jpg" alt ="Dirty Sink" width="85%" height="85%">
+      </div>
+
+
+     <p>
+       Previously we have taken a Bayesian model to discern whether we think the sink is full of pot, pans and plates. Based on what we've previously seen, then It probably is.
+     </p>
+
+     <p>
+       However - one of my more washing responsible housemates has recently returned from MIT so we are trying to be a little more on top of things.
+     </p>
+
+     <p>
+       The previous problem was that no one wanted to be the person to constantly be sending out messages saying the sink is dirty -
+        we are all good friends and trust it will be done whenever the person has time (we are all often flying in and out of the house), and its not fun to be the house villain.
+     </p>
+
+     <p>
+       My housemate Thommen had a very novel solution to this - he automated the task of detecting whether the sink is dirty to a robot system.
+        It uses a neural network to detect whether the sink is dirty and emails everyone is the house and abuses us in Singlish if it's not up to spec.
+      </p>
+
+      <div class="openingimage">
+         <img src="neural/thommen1.jpg" alt ="Thommen Karimpanal George" width="85%" height="85%">
+       </div>
+
+       <p>
+         I would like to make clear that this is entirely the work of my housemate Thommen -  <a href="https://www.github.com/">whose own personal website can be found here.</a>
+          I didn't do any work developing this! Thommen is a robotics and sensing expert so this was a piece of cake for him - he mostly works with path finding for robots.
+       </p>
+
+       <p>
+         The reason why I'm writing it up is because its cool - Thommen hasn't got a write up on it yet and I really thought this is something that
+          the Internet would enjoy (especially a forum such as <a href="https://www.reddit.com/r/shittyrobots/">/r/shittyrobots</a>). I've asked him if it is ok to share online.
+           I also want to remember how the system worked and have a code repository later in case I (or anyone else reading this!) would like to do something similar.
+       </p>
+
+       <p>
+          <a href="https://www.github.com/">Thommen's github with the code is found here.</a>
+       </p>
+
+       <h3> The method works as follows:</h3>
+
+       <p>
+         First there is a webcam attached to the cupboard above the sink and plugged into the power outlet.
+         This is a Wi-Fi camera, which connects directly to Thommens laptop. Now unfortunately Wi-Fi is a 1-1 connection,
+         so he also used a Wi-Fi dongle on the laptop to give Internet access.
+       </p>
+
+
+       <div class="openingimage">
+          <img src="neural/camera2.jpg" alt ="Camera" width="85%" height="85%">
+        </div>
+
+       <p>
+         The camera can thus give a continuous feed to the laptop if necessary - however this would be a huge pain, also we would only like to receive updates on the sink status periodically
+       </p>
+
+       <p>
+         So instead there is a master-file in MatLab, which will in eminently use the feed to capture an image for evaluation.
+          Currently this is set to once every three days.
+       </p>
+
+       <p>
+         This image is then used as an input to a neural network program which has be previously trained using catagorised images sets of the clean and dirty sink.
+          To train this Thommen actually needed to have images of the sink in a clean state, and thus do all the washing up (so the project has already
+           payed dividends by this point!) as well as some image of a dirty sink... which were not too hard to procure.
+       </p>
+
+       <p>
+         The use of neural network is ideal here. It would also be possible to calculate the difference between a picture of the clean sink and whatever picture
+          is give and output a distance measure - however this would be less robust to the camera being knocked slightly,
+           lighting conditions, and the movement of the arm of the tap which can move from side to side.
+            Obviously it is in our interest for the classification of the image to be as accurate as to avoid false positives
+            (false negatives would mean we still don't clean the sink - so pretty much the status quo).
+       </p>
+
+
+       <p>
+         The network was built and trained in MatLab using the default toolbox. This built upon some of Thommen's previous work from an old masters project where he had used a neural network to identify male and female faces. The output of the network is a true of false value, indicating the state of the sink. If the image tests positive then the image is the sent using directly from MatLab using a dedicated email account.
+       </p>
+
+       <p>
+         A future addition to the project would be to change the system from running on a laptop to onto a raspberry Pi.
+          This would be great as, although the system is running automatically, it will only work if Thommen has his laptop at home.
+       </p>
+
+       <p>
+         This is especially a problem for him - as this would mean he's at home - and thus is available for domestic chores.
+       </p>
+
+       <p>
+         Using a Pi with a built in Wi-Fi dongle and cable webcam (or an extra dongle if the current Wi-Fi cam is still used) then this wouldn't be the
+          case - we could just glue the pi to the cupboard next to the camera.
+           However - getting MatLab on a Pi might be more of a problem. The solution would probably be to do the whole thing again in a different
+            language (such at TensorFlow or Theano for python) but this would mean translating ALL of the code... which might take hours!
+             This isn't going to happen anytime soon I imagine.
+           </p>
+
+           <div class="openingimage">
+              <img src="neural/email_image.png" alt ="Email" width="85%" height="85%">
+            </div>
+
+           <p>
+             When the image is sent via email, it is accompanied by a short phrase randomly chosen from a list. Usually a bit of Singlish (Walao! So messy ah! THIS CANNOT),
+             urging us actually wash some dishes.
+           </p>
+
+
+            <p>
+              The final stage of this project is now going to be evaluating how successful this is in making us do the washing up.
+              Honestly - this might work. However - a more likely scenario, which I envision happening soon, is me or David screwing with the camera.
+               This is likely as it is communicating via Wi-Fi, its open to an ARP poisoning attack, which means I may be able send different images to the network as input.
+            </p>
+
+
+
+
+            <h2>More coming soon - sending the sink on a psychedelic trip (in progress)</h2>
+
+            <div class="openingimage">
+               <img src="neural/starry_stanford_bigger.png" alt ="Dirty Sink" width="85%" height="85%">
+             </div>
+
+
+              <p> So for a while now I've seen many pictures online of people using neural networks to restyle photos (yes, yes, I'm aware theres an app for that now
+                - Prisma in particular comes to mind, and I believe there is one for GIFs also) as well as using googles deep dream for photos.
+                So I really wanted to get it working myself to play around with some images - the results weren't spectaucular I'll admit - mostly due to my lack of GPU processing power on my local machine,
+                 but here is a write up for myself and the reader on how to get everything working.
+                 <br><br>
+                 This guide will walk you through the setup for neural-style on Ubuntu <a href="https://github.com/jcjohnson/neural-style/blob/master/INSTALL.md ">to edit images.</a>
+          </p>
+
+
+
+
+
+
+
+
+
+        </div>
+
+
+
+      </div>
+
+
+
+    </section>
+
+
+
+
+  </div>
+</body>
+</html>
