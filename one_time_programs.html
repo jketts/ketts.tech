@@ -54,16 +54,220 @@
 
   <section >
     <div class="article">
-      <h1 class="articletitle">Coming soon! </h1>
+      <h1 class="articletitle">A Quantum Advantage for Probabilistic One Time Programs</h1>
 
 
   <div class="articletext">
-      <p> Coming soon!</p>
+
+
+    <p>
+      Me and my collaborators have just released a paper detailing a method for sending one time programs using quantum states - and showing an experimental
+       implementation of the method.
+    </p>
+
+    <p>
+      This article is directed at the layman, and explains exactly what we showed and why you should be interested.
+    </p>
+
+    <p>
+      The paper is currently live and free to view <a  href="https://arxiv.org/pdf/1709.09724.pdf">on ArXiv here</a>,
+      the official version of the paper <a  href="https://arxiv.org/pdf/1709.09724.pdf">is published here </a> (*we are still waiting for the published version to come online!)
+       - but may be behind a paywall if you don't have access to the journal.
+    </p>
+
+    <p>
+      Feel free to quote, copy or otherwise use any of my writing from here - if you have any questions or comments feel free to shoot me and email!
+    </p>
+
+    <h2>What are one time programs?</h2>
+
+    <p>
+      One-time programs are computer programs which self-destruct after being run only once. They are a powerful building block in cryptography and would allow for new forms
+       of secure software distribution.
+    </p>
+
+    <p>
+      Imagine you receive a program, you run it once and POOF - its gone! All you are left with is the output the program gave for whatever your input was.
+    </p>
+
+    <p>
+      You can never run it again. Also - you can't open it up and look at how it was made (because, if you could do that, then you could copy the program and then
+      run it multiple times).
+    </p>
+
+    <h2>What would this be used for?</h2>
+
+    <p>
+      Well - imagine that you're Bob, who has some very private data. This could be all your tax information, or maybe a medical scan.
+       It's certainly not something you just want to give away, or you might not even legally be able to give it away… but you aren't sure what to do with it.
+        You don't know how to process the information yourself.
+    </p>
+
+    <p>
+      Then along comes some company, lets call that company Alice. They have spent a lot of time and money developing a fancy program that could use your data,
+       and say how much tax you owe, or what the medical scan means for your health. Your data could be an input to their program - and the output is something you, Bob, want.
+    </p>
+
+    <p>
+      But even this output you don't want to give to Alice either. You don't want her to know your health (maybe you've been eating a lot of chocolates and are embarrassed),
+       or the state of your finances (they were very expensive chocolates).
+    </p>
+
+    <p>
+      The problem is the Alice won't just give you the program - they want to sell it to get back all the money they spent making it, and then a profit on top.
+       Alice thinks you might try to use it again for next year's tax information, or copy it and send it to friend, or put it on the internet for free,
+        or even trying to sell it yourself!
+    </p>
+
+    <p>
+      So now we have a problem of mutual distrust - people want to work together but just don't trust each other.
+    </p>
+
+    <p>
+      But let's imagine that the program is IMPOSSIBLE to copy. And you are guaranteed to only be able to use it once. Then Alice could just send you the program without worrying.
+    </p>
+
+    <p>
+      That's what one time programs are good for.
+    </p>
+
+    <p>
+      But they weren't thought to be possible. Any program written down, even in computer code, can easily be copied.
+      You would need one time hardware - a computer that literally explodes once you've typed in your tax information!
+    </p>
+
+    <p>
+      One time programs have long been something cryptographers really want to create, however, ideal one-time programs have been proved to be
+      unachievable using either classical or quantum resources (The exploding computers can still be looked at to see how they function - and copied - plus no
+      one wants to have to but new computers all the time). So this seems like a problem…
+    </p>
+
+
+    <h2> Wait - what are quantum resources?!?</h2>
+
+    <p>
+      Ah. These are, to simplify, inherently quantum things (like the oscillation of a single particle of light - called a photon, or a some properties of single atoms).
+       They behave strangely compared to our intuition - although we have a very good understanding of them mathematically.
+        Quantum resources can be used to do a lot of interesting computational things; there are many famous algorithms which use them that appear to be faster than normal,
+         classical, algorithms; such as Shor's algorithm for quickly breaking down numbers into prime factors - which breaks some cryptographic schemes.
+    </p>
+
+    <p>
+      Quantum resources can also be used to hide things as well. This may be useful for establishing keys between two people which are then used to encrypt messages
+       (examples of this being the BB84 scheme and the Ekert 91 scheme). It is this second kind of behavior that we used in this method.
+    </p>
+
+    <h4> What we wanted to do was hide a computer program using quantum resources. </h4>
+
+    <p>
+      What we realized first is that these programs are possible - as long as you remove the word "ideal".
+      So long as the program has some probability of failing (giving you the wrong answer), then they are possible to make.
+    </p>
+
+    <h2>The experiment</h2>
+
+    <p>
+      We broke down some example programs to their smallest logical components - these are called logic gates.
+       Every possible deterministic classical program can be constructed in terms of logic gates that link to one another (deterministic means that there is no randomness
+        in the program - computers get randomness in special ways, by reading from a rapidly changing memory address, or often using a temperature reading from inside the computer).
+    </p>
+
+    <p>
+      You can make any program out of one big logic gate if you wanted - but it's usually best just to used lots of small ones linked together. It's much more efficient.
+      A logic gate is in itself like a tiny program. It takes some input and gives some output. So you can think of all possible programs being made of a big set of little
+       tiny programs - in the same way that you can make anything from Lego if you've got enough bricks.
+       We then designed a way to encode every logic gate into photons - that work the correct way most of the time.
+       Together lots of these photons encode lots of logic gates. And lots of logic gates encode a program. Like Lego bricks!
+       What we do is make a relationship with how to measure the photons, to logic gates. The way the light reacts to being measured is determined by the specific gate.
+       Thanks to the quantum nature of photons you can be sure that once they've measured them one way, the photons have permanently changed and can't be used again.
+       This is our analogy to the computers that explode.
+     </p>
+
+     <h2>In the lab</h2>
+
+     <p>
+       We split the lab in half and imagined there was one person on each side. On one was side was Alice, who has a program, and the other is Bob,
+        who has some input and wants to run the program.
+       What we did is used photons, the quantum objects, to encode the logic gates.
+       We then sent them across to lab (photons are light so of course travel at the speed of light, so the distance isn't really an issue here) from Alice to Bob.
+       Bob then measures the photon when they arrive. He can measure them in several different ways - which ever way he likes! But he wants to choose a way
+        that is relate to his actual data. But remember, once he's measured them one way, he has changed them permanently. But he still gets an answer for that measurement.
+      </p>
+
+      <div class="openingimage">
+        <img src="otp/lab_setup.png" alt ="vienna lab setup" width="85%" height="85%">
+      </div>
 
 
       <p>
-        Coming soon!
+        This is a little complicated. In this way the light doesn't just describe the program being sent, as the zeros and ones do in normal programs.
+         The light IS the program - it IS the computer.
+      </p>
+
+      <p>
+        To give an input into the program you have to interact with the light. But once you've done that its been changed. You've broken the computer.
+      </p>
+
+      <p>
+        This may seem weird - so you may be getting the idea of why people call quantum mechanics weird. It is weird.
+      </p>
+
+
+            <div class="openingimage">
+              <img src="otp/alice_and_bob.png" alt ="alice and bob diagram" width="85%" height="85%">
+            </div>
+
+
+      <h2>Error problems</h2>
+
+      <p>
+        One of our big advantage of this scheme over other quantum schemes generally is that here, we don't have to worry about losing photons.
+      </p>
+
+      <p>
+        This is inevitable in practice. We are dealing with the smallest things in the universe so we actually lose quite a lot.
+         Sometimes the detectors don't pick them up, sometimes they get absorbed in the fiber optics, and sometimes they go god knows where.
+      </p>
+
+      <p>
+        The problem could be that, for Alice, it's hard to tell if Bob got a photon, or if he lied and he wants two. She doesn't want to give him two programs
+         if he only paid for one!
+      </p>
+
+      <p>
+        We managed to design the encodings in a way that this doesn't matter. Bob has to say whether he got the photons or not - and only if he says he did,
+         does Alice give him some information that lets him use them - otherwise they are useless to him.
+      </p>
+
+      <p>
+        This was a really nice little trick, which made the experiment possible.
+      </p>
+
+      <h2>Future</h2>
+
+      <p>
+        Now - I should be very clear, these programs aren't perfect, they fail sometimes. However - we conclusively show this is better than anything that could
+         be possible classically. The question next is, just how much better can we get?
+       </p>
+
+       <p>
+      The future of computing isn't immediately going to be full quantum computers - although we (as a field) are making progress towards these, we are
+       still very far away from commercial applications. What we should hopefully see soon though are hybrid machines, which use quantum resources to preform specific tasks.
      </p>
+
+
+      <h2>Who worked on the project</h2>
+
+    <p>
+      Me (Joshua Kettlewell), <a  href="https://www.linkedin.com/in/tiago-batalh%C3%A3o-7751b117/">Tiago Batalhao</a> and <a  href="http://jfitzsimons.org/">Joseph Fitzsimons</a> worked on the theory part of
+       the paper at Singapore University of Technology and Design, and the Centre for Quantum technologies at the Nation University of Singapore. Our group website is <a  href="http://group.jfitzsimons.org/">here</a>.
+    </p>
+
+    <p>
+      <a  href="https://walther.univie.ac.at/people/marie-christine-roehsner/">Marie-Christine Roehsner</a> and <a  href="https://walther.quantum.at/people/philip-walther/">Philip Walther</a> designed
+      and preformed the experimental setup at the University of Vienna. Their group page is <a  href="https://walther.univie.ac.at/research/">here</a>.
+    </p>
+
 
 
    </div>
