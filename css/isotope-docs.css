@@ -399,12 +399,13 @@ nav a:hover, nav .current a{
   margin-right: 100px;
   padding-right: 200px;
   text-align: left;
-
 }
 
 .articletitle{
   text-align: center;
-  padding: 50px}
+  padding: 50px;
+  font-family: 'Helvitica', sans-serif;
+}
 
 .articletext{
   text-align: left;
