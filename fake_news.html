@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-97650091-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<link rel="stylesheet" href="css/isotope-docs.css" media="screen">
+<html class="export">
+
+<div class="topflexbox">
+  <head>
+    <title>Joshua Kettlewell | Projects</title>
+
+  </head>
+
+
+  <body data-page="index">
+
+
+
+    <header class="header">
+     <a  href="index.html"><div class="maintitle">
+       <h1>Joshua Kettlewell</h1>
+       <h3>Ph.D Student,<br>  Singapore University <br>   of Technology and Design</h3>
+     </div></a>
+
+
+     <div class="navs">
+       <nav>
+         <ul>
+           <li class="site-nav__item site-nav__item--filtering">
+             <a href="index.html">Projects</a></li>
+           <li class="site-nav__item site-nav__item--filtering">
+             <a href="aboutme.html">About me</a></li>
+           <li class="site-nav__item">
+               <a href="http://qti.sutd.edu.sg/">Group Webpage</a></li>
+           <li class="site-nav__item ">
+                 <a  href="https://scholar.google.com.sg/citations?user=tQ_YGVIAAAAJ&hl=en">Publications</a></li>
+           <li class="site-nav__item ">
+                 <a  href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+     </div>
+
+   </header>
+</div>
+
+
+
+<section >
+  <div class="article">
+    <h1 class="articletitle">Fake News Hackathon</h1>
+
+
+<div class="articletext">
+
+  <p>
+    This is a write up of a project we completed at a hackathon on the 14th October 2017 at the Google office in Singapore. Although we didn't win, we were one of the finalists.
+    <a href="https://github.com/jketts/tbv">The github of our code is here.</a>
+  </p>
+
+
+  <div class="openingimage">
+    <img src="fakenews/poster.png" alt ="tulipmania" width="85%" height="85%">
+  </div>
+
+  <p>
+The aim of the hackathon was to use crowdsourcing to stop fake news. Now, it was explained that there is a major government fear that, because older Singaporean are
+very non tech savvy, misinformation can spread incredibly quickly. They seem especially worried about false reports of terrorist incidents (a terrorist style attack
+seems to be something that Singapore is incredibly worried about - the who country is full of posters says “not if - but when!”. As someone from the UK,
+ which has been getting bombed since bombs were invented, I find this is weird). However, our team didn't really like the fixation on crowdsourcing.
+ We believe the only real solution to finding truth is good journalism - and using crowd sourcing (and comformity) to find an objective truth should not be the
+  direction we want to encourage. But that was the topic...
+  </p>
+
+  <p>
+ Our solution was to inoculate vulnerable people against fake news. The thinking is as follows:
+</p>
+
+ <p>
+ People like fake news. This is shown in how much more often it is shared on social media than other types on news. People also live in online filter bubbles.
+ They like living in filter bubbles where their opinions are reinforced. People will not proactively try to break out of filter bubbles.
+ They will not install an app to have their opinions challenged.
+ </p>
+
+
+       <div class="openingimage">
+         <img src="fakenews/im1.png" alt ="tulipmania" width="85%" height="85%">
+       </div>
+
+<p>
+This means that any approach that requires the public to be proactive is probably going to fail.
+</p>
+
+<p>
+However, there a method is known to combat this, which is referred to, at least in US intelligence, as disinfo inoculation.
+This is similar to a vaccine; exposing people to untrustworthy news sources, and labeling them as such, before they see the news.
+ Everything they consume from that point on is immediately taken with a pinch of salt, so to speak.
+</p>
+
+<div class="openingimage">
+  <img src="fakenews/im2.png" alt ="tulipmania" width="85%" height="85%">
+</div>
+
+
+<p>
+More news sites, even fake new sites, like to become established. Making new websites and getting the information network to follow your new site takes a while to build up.
+This means that fake news articles are actually quite easy to find.
+</p>
+
+<p>
+The so if the solution was just about identifying fake news that would be no good as this is already well studied. Again, the easiest solution is essentially good journalism.
+</p>
+
+<div class="openingimage">
+  <img src="fakenews/im5.png" alt ="tulipmania" width="85%" height="85%">
+</div>
+
+<p>
+What we did first was find relatively insular groups who might be susceptible to fake news. To do this we found networks, which we call cliques,
+of high highly connected individuals (We call them cliques because they are highly interconnected - I know this isn't the true mathematical definition of a clique!)
+around highly biased political sources. For example, one way to find them was by analyzing the followers of Breitbart news. We aren't saying the Breitbart is fake news -
+but the community that follows Breitbart, and is quite insular, and leans to the rightwing of politics, will be susceptible to fake news confirming their beliefs
+ (for example; new stories about the Pope endorsing Trump).
+</p>
+
+<p>
+This network was easily identified and graphed using twitter, which is easily scraped using the python TWEEPY, and TWECOLLS packages.
+I mostly used TWECOLLS, which allows us to instantly form a graph of follower connections. We can then identify the most influential people in a network,
+ and the path on which information is likely to travel in the network. This scraping takes a little time - as the TWITTER API will throttle you if you make too many requests.
+</p>
+
+<div class="openingimage">
+  <img src="fakenews/im4.png" alt ="tulipmania" width="85%" height="85%">
+</div>
+
+<p>
+We then identified other networks around what are generally considered moderate and established news sources, or sources which are more politically neutral.
+We define these networks to more trust worthy if includes many members with differing political tastes (some are also followers of leftwing sources, some are
+ also followers of rightwing sources).  We used the straits times to find our network in the hackathon (because they were a sponsor and we were totally pandering).
+</p>
+
+
+
+
+<p>
+OK - now this is set up we can start fighting the fake news.
+</p>
+
+<p>
+When we see a post trending in one network, which is likely to be fake (for example if its one of the known fake sites
+https://en.wikipedia.org/wiki/List_of_fake_news_websites) , we preform a search in the trusted network, again using the twitter API, for related stories.
+These may criticize the source, or directly address the issue. We then link that information to people on the edge of the biased first network - essentially front running the information so they are more skeptical should they receive fake news in the future.
+</p>
+
+
+<div class="openingimage">
+  <img src="fakenews/im6.png" alt ="tulipmania" width="85%" height="85%">
+</div>
+
+
+
+<p>
+Problem solved! If we can inoculate the correct node, then we are able to dramatically limit the spread of fake articles in the graph.
+Yes - it may seem weird to randomly receive an article about an issue you've not heard of, or criticizing a source, but this is because you are likely to hear about it soon.
+</p>
+
+<div class="openingimage">
+  <img src="fakenews/im7.png" alt ="tulipmania" width="85%" height="85%">
+</div>
+
+
+<h3> But we could also use think to stop polarizing effects in society of filter bubbles.</h3>
+
+<p>
+Now, this method could also be used to link to groups with conflicting opinions. If instead of just looking at fake news, you just identify tending news,
+ and instead of biased and moderate networks, we choose them both to be biased on different sides on any issue. Using this you could inoculate about opinions,
+  or - if the system is run both ways sending information between the two network, create a genuine balanced dialogue between the two groups. Or they might just fight.
+   Either way - we considered this better than living in a filter bubble.
+</p>
+
+<p>
+So - we got all this working in 4 hours!
+</p>
+
+<p>
+Its scrapes twitter, forms the graphs, checks for fake news trending in one of them, searches the other for relevant links on the story or source,
+ and cross posts back to smaller nodes in the first graph.
+</p>
+
+<p>
+I also used gephi to display the graph data. This is a little bit buggy but something I would certainly love to be using more in the future.
+</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/U_SsRdFwKEo" frameborder="0" allowfullscreen></iframe>
+
+
+<h2>AND THAT'S NOT ALL!</h2>
+
+<p>
+We also fleshed out an app, for no other reason than because our team is awesome. If the search on the trusted network receives no results,
+ then there is no way for us to inoculate people against a story. The app simply spots if a new story/source in trending in the group
+ and should inform journalists to make a new post. Admittedly - we could of also got a twitter bot to do this... but one of our members really want to make an app,
+ so who are we to say no.
+</p>
+
+<div class="openingimage">
+  <img src="fakenews/app2.png" alt ="tulipmania" width="85%" height="85%">
+</div>
+
+<p>
+Now... we didn't win; but we thought we did have a good approach. Surely the best app to defend against fake news is the one you never have to use at all?
+</p>
+
+<p>
+Some of the other finalists ideas included allowing Google info (where you hold down the home button on android so it gives information about what is on your screen)
+ to also do reverse image search. This is a great idea which should implement regardless of how well it may combat fake news. Another idea was one wherein fake new
+ is sites area spread purposefully, but sharing the news via social media will send you to the snopes page explaining why its fake
+ (thus embarrassing you for sharing a fake story!) - personally I wasn't convinced this was a great idea.. if people don't read the article then
+  all this amounts to is actually spreading more fake news. Another team just made a database of some popular Singapore websites, and did sentiment analysis.
+   They then made a chrome plugin than would show the results of the sentiment analysis when it detects a link to one of these pages. This was the winner.
+</p>
+
+<p>
+These are all good ideas - but I'm really convinced that anything that requires users to stop and think isn't going to work.
+ We did get some free Google cardboard for getting to the final so that was cool I guess.
+</p>
+
+
+<h2>Resources:</h2>
+
+
+<ul>
+  <li><a href="https://venturebeat.com/2017/02/02/how-to-build-your-own-twitter-bot-in-less-than-30-minutes/">Bots made where similar to that used here.</a> This is something I want to
+  work more ion in the future!</li>
+
+  <li><a href="https://github.com/jdevoo/twecoll">This was the code for scraping twitter and making graphs.</a> Its SUPER easy to get set up, and the video linked above explains
+  the process we followed almost exactly.</li>
+
+  <li> We used code to that DSA had already written<a href="https://dsa.tech/twitter-link-bot/">(found here)</a> to get debunking stories/trusted reports off twitter. It pretty much
+  does a search for keywords over some accounts using TWEEPY.</li>
+
+  <li><a href="https://firstdraftnews.com/">This is a list of resources</a> for journalists, including reverse image search and checking when an instagram post was posted. </li>
+
+  <li><a href="http://graph.tips/">We started looking at this facebook tool.</a> This allows you to do quick searchs of someones facebook profile. It seems to be a common
+  tool used by journalists.</li>
+
+</ul>
+
+
+
+
+</div>
+
+
+
+ </div>
+
+
+
+</section>
+
+
+
+
+  </div>
+</body>
+</html>
