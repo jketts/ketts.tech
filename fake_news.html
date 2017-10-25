@@ -63,7 +63,7 @@
   <p>
     This is a write up of a project we completed at a hackathon on the 14th October 2017 at the Google office in Singapore. Although we didn't win, we were one of the finalists.
     <a href="https://github.com/jketts/tbv">The github of our code is here.</a> The other team members were the imfamous <a href="https://dsa.tech/">DSA</a>,
-     my coworker <a href="http://tommasodemarie.com/">Tommaso Demaire</a>, fellow SUTD student Andrei Bytes, and SUTD postdoc Balamurali. 
+     my coworker <a href="http://tommasodemarie.com/">Tommaso Demaire</a>, fellow SUTD student Andrei Bytes, and SUTD postdoc Balamurali.
   </p>
 
 
@@ -155,9 +155,10 @@ OK - now this is set up we can start fighting the fake news.
 </p>
 
 <p>
-When we see a post trending in one network, which is likely to be fake (for example if its one of the known fake sites
-https://en.wikipedia.org/wiki/List_of_fake_news_websites) , we preform a search in the trusted network, again using the twitter API, for related stories.
-These may criticize the source, or directly address the issue. We then link that information to people on the edge of the biased first network - essentially front running the information so they are more skeptical should they receive fake news in the future.
+When we see a post trending in one network, which is likely to be fake (for example if its one of the
+ <a href="https://en.wikipedia.org/wiki/List_of_fake_news_websites">known fake sites</a> ) , we preform a search in the trusted network,
+ again using the twitter API, for related stories. These may criticize the source, or directly address the issue. We then link that information to people on
+ the edge of the biased first network - essentially front running the information so they are more skeptical should they receive fake news in the future.
 </p>
 
 
@@ -182,7 +183,7 @@ Yes - it may seem weird to randomly receive an article about an issue you've not
 <p>
 Now, this method could also be used to link to groups with conflicting opinions. If instead of just looking at fake news, you just identify tending news,
  and instead of biased and moderate networks, we choose them both to be biased on different sides on any issue. Using this you could inoculate about opinions,
-  or - if the system is run both ways sending information between the two network, create a genuine balanced dialogue between the two groups. Or they might just fight.
+  or - if the system is run both ways sending information between the two networks, create a genuine balanced dialogue between the two groups. Or they might just fight.
    Either way - we considered this better than living in a filter bubble.
 </p>
 
@@ -191,7 +192,7 @@ So - we got all this working in 4 hours!
 </p>
 
 <p>
-Its scrapes twitter, forms the graphs, checks for fake news trending in one of them, searches the other for relevant links on the story or source,
+It scrapes twitter, forms the graphs, checks for fake news trending in one of them, searches the other for relevant links on the story or source,
  and cross posts back to smaller nodes in the first graph.
 </p>
 
@@ -214,6 +215,39 @@ We also fleshed out an app, for no other reason than because our team is awesome
 <div class="openingimage">
   <img src="fakenews/app2.png" alt ="tulipmania" width="85%" height="85%">
 </div>
+
+
+<h2>Further applications of the work</h2>
+
+<p>
+So the great thing about this approach is that it is completely autonomous. We just need to think how to deploy it.
+</p>
+
+<p>
+Although this solution was implemented for twitter, we could really use this approach anywhere.
+The reason we chose twitter is that the API makes it easy to search, so it is ideal for a hackathon,
+ but in theory this could be done over any network provided you have two things;
+</p>
+
+<ol>
+  <li>Ability to see what people are talking about </li>
+  <li>Ability to see who is connected, or likely to be connected, to who </li>
+</ol>
+
+</p>
+
+<p>
+For certain social networks, this is hard as content is private (for example on WhatsApp or telegram), however forming networks is possible
+(for example via using phone contacts, linkedIn contacts or facebook friends). Our thinking was that information and opinions aren't limited to a single platform
+- if people want to discuss something they will spread it over different platforms so by inoculating people one network you can still affect the others.
+ A broad approach may work well to connect people across different applications if possible. This approach is general enough to use on any network -
+ we could also use it to connect online blogs or news sites so they don't accidentally spread fake news from each other
+ (presuming that the journalists are not taking the time to investigate stories thoroughly before publishing a "breaking news" story).
+</p>
+
+
+<h2>Results</h2>
+
 
 <p>
 Now... we didn't win; but we thought we did have a good approach. Surely the best app to defend against fake news is the one you never have to use at all?
